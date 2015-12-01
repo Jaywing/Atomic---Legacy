@@ -1,0 +1,63 @@
+//
+//	SITE SEARCH
+//
+//  
+//
+
+$site-search-height: 3rem;
+$site-search-input-width: 100%;
+$site-search-button-padding: 0.5rem;
+$site-search-button-width: 20%;
+$site-search-button-color: map-get($brandcolors, green);
+$site-search-button-hover-color: map-get($brandcolors, darkGreen);
+$site-search-max-width: 45rem;
+
+.site-search {
+  max-width: $site-search-max-width;
+  margin: 0 auto;
+
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin:0;
+  }
+
+  legend, label, .site-search-button-text {
+    @extend %visuallyhidden;
+  }
+
+  input[type=search] {
+    width: $site-search-input-width;
+    float: left;
+    padding-right: 20%;
+    height: $site-search-height;
+    margin: 0;
+    border: 1px solid darken(map-get($brandcolors, lightGrey), 5%);
+    &:hover, &:focus {
+      border-color: map-get($brandcolors, grey);
+    }
+  }
+
+  .search-submit {
+    width: $site-search-button-width;
+    padding: $site-search-button-padding;
+    height: $site-search-height;
+    background: none;
+    margin: 0;
+    border-left: 0;
+
+    .icon-search {
+      color: $site-search-button-color;
+      font-size: 1.5rem;
+    }
+
+    &:hover, &:focus {
+      //border: 1px solid darken(map-get($brandcolors, lightGrey), 5%);
+      border-left: 0;
+      .icon-search {
+        color: $site-search-button-hover-color;
+      }
+    }
+  }
+
+}

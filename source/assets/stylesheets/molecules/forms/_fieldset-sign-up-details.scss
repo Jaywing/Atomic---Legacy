@@ -1,0 +1,18 @@
+//
+// FIELDSET - CANDIDATE REGISTER
+//
+//
+
+$sign-up-details-bp: tabletLrg;
+$sign-up-details-padding: $spacing-sml $spacing-med 0 $spacing-med;
+$sign-up-details-padding-dt: $spacing-med $spacing-lrg 0 $spacing-lrg;
+$sign-up-details-border: 1px solid map_get($brandcolors, lightGrey);
+
+.sign-up-details {
+  padding: $sign-up-details-padding !important;
+  border: $sign-up-details-border;
+
+  @include respond-to($sign-up-details-bp) {
+    padding: $sign-up-details-padding-dt !important;
+  }
+}

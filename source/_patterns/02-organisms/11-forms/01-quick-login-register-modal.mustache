@@ -1,0 +1,32 @@
+<a href="#login-register" id="open-login-register" class="button large">Open modal</a>
+
+<div class="remodal" id="login-register" data-remodal-id="login-register">
+
+  <button data-remodal-action="close" class="remodal-close"></button>
+
+  <section class="collapsible-tabs" id="tabs-login-register">
+
+	  <ul class="tab-controls tabs-2">
+			<li class="is-active">
+				<a href="#tab-login" class="button small block">Sign in</a>
+			</li>
+			<li>
+				<a href="#tab-signup" class="button small block">Register</a>
+			</li>
+		</ul>
+
+		<div class="collapsible-tabs-content-destination">
+	
+			<div id="tab-login" class="collapsible-tabs-content-item is-active">
+				{{> molecules-login }}
+			</div>
+
+			<div id="tab-signup" class="collapsible-tabs-content-item">
+				{{> molecules-quick-signup }}
+			</div>
+
+		</div>
+
+	</section>
+
+</div>

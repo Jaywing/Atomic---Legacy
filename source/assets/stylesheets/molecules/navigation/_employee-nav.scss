@@ -1,0 +1,100 @@
+//
+//  EMPLOYEE NAV
+//
+//  
+//
+
+$employee-nav-bp-med:   tabletSml;
+$employee-nav-bp-lrg:   desktopSml;
+
+$employee-nav-cols-sml: 4;
+$employee-nav-cols-lrg: 6;
+
+$employee-name-transition:  all 0.25s linear;
+$employee-name-line-height: 1.1;
+$employee-name-padding:     0 $spacing-sml;
+$employee-name-color:       map-get($brandcolors, black);
+$employee-name-font-size: $font-size-sml;
+
+.nav-employees {
+  @extend %container;
+  @include clearfix;
+  @extend .h-no-list-styles;
+  display: table;
+  width:100%;
+}
+
+.nav-employee,
+.nav-employee-edit {
+  display: none;
+  text-align: center;
+  vertical-align: top;
+
+  .employee-name {
+    @include transition(all 0.25s linear);
+    line-height:  $employee-name-line-height;
+    padding:      $employee-name-padding;
+    color:        $employee-name-color;
+    display:      block;
+  }
+
+  a {
+    display:    inline-block;
+    text-align: center;
+
+    img {
+      @include transition(all 0.25s linear);
+      width: 5rem;
+      max-width:  105px;
+      border-radius: 50%;
+      border:3px solid transparent;
+      margin: $spacing-sml auto;
+    }
+    &:hover, &:focus {
+      .employee-name {
+        color: map-get($brandcolors, green);
+      }
+      img {
+        border-color: map-get($brandcolors, green);
+      }
+    }
+  }
+
+  .touch & {
+    .employee-name {
+      bottom:   0;
+      opacity:  1;
+    }
+  }
+  
+}
+
+//Only for edit mode
+.nav-employee-edit {
+  display: table-cell;
+}
+
+//Only for non-edit mode
+.nav-employee {
+  &:nth-child(-n+4) {
+    display: table-cell;
+    width: 25%;
+  }
+  // show all 4 for small viewport
+}
+
+
+@include respond-to($employee-nav-bp-med) {
+  .nav-employee {
+    &:nth-child(-n+6) {
+      display: table-cell;
+      width: 16.6667%;
+    }
+    a {
+      img {
+        width: 7rem;
+      }
+    }
+    // show 6 for medium viewport
+  }
+}

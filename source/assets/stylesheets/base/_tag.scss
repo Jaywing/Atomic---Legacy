@@ -1,0 +1,70 @@
+//
+//	TAG
+//
+//
+
+$tag-bg-color: rgba(232,214,187,0.5);
+$tag-padding: $spacing-sml $spacing-med $spacing-sml $spacing-sml;
+$tag-border: none;
+$tag-color: map_get($brandcolors, brown);
+$tag-icon-color: map_get($brandcolors, white);
+$tag-icon-size: 0.5rem;
+$tag-margin: rem(5);
+$tag-active-bg-color: map_get($brandcolors, khaki);
+$tag-active-border-color: map_get($brandcolors, brown);
+$tag-active-color: map_get($brandcolors, grey);
+$tag-hover-color: map_get($brandcolors, brown);
+$tag-hover-bg-color: map_get($brandcolors, khaki);
+$tag-hover-border-color: map_get($colors, black);
+$tag-font-size: $font-size-sml;
+
+%tag-active {
+  background: $tag-active-bg-color;
+  border-color: $tag-active-border-color;
+  color: $tag-active-color;
+}
+
+.tag {
+  display: inline-block;
+  background: $tag-bg-color;
+  padding: $tag-padding;
+  cursor: pointer;
+  border: $tag-border;
+  color: $tag-color;
+  margin: $tag-margin;
+  text-decoration:none;
+  text-transform: none;
+  font-weight: 300;
+  font-size: $tag-font-size;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  &:hover, &:focus {
+    color: $tag-hover-color;
+    background: $tag-hover-bg-color;
+    border-color: $tag-hover-border-color;
+  }
+  &.tag-active {
+    @extend %tag-active;
+  }
+  &:before {
+    content:'\e811';
+    font-family: $icon-font;
+    display:inline-block;
+    margin-right:0.5rem;
+    font-size: $tag-icon-size;
+    color: $tag-icon-color;
+  }
+
+}
+
+[type=checkbox] {
+  + .tag {
+    margin-left: -2px;
+  }
+  &:checked {
+    + .tag {
+      @extend %tag-active
+    }
+  }
+}
+

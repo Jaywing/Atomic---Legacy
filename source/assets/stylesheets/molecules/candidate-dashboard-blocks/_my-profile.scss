@@ -1,0 +1,75 @@
+//
+// MY PROFILE
+//
+//
+
+$my-profile-bp: phoneSml;
+$my-profile-graphic-bg-colour: map_get($brandcolors, green);
+$my-profile-graphic-size: 8rem;
+
+
+.my-profile {
+  @include clearfix;
+
+  h3 {
+    margin-bottom: $spacing-sml;
+  }
+
+  p {
+    margin: 0 0 $spacing-med 0;
+  }
+
+  .profile-completion {
+    margin-bottom: $spacing-lrg;
+  }
+
+  .profile-completion-graphic {
+    display: table;
+    position: relative;
+    background: $my-profile-graphic-bg-colour;
+    color: #fff;
+    border-radius: 100%;
+    width: $my-profile-graphic-size;
+    height: $my-profile-graphic-size;
+    text-align: center;
+
+    span {
+      line-height: 1;
+      font-size: 1.8rem;
+      font-weight: 600;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  ul {
+    margin-bottom: 0;
+
+    li {
+      a {
+        @extend .touch-spacing-v;
+      }
+    }
+  }
+}
+
+@include respond-to(phoneLrg) {
+  .list-item-details {
+    .list-item-details-inner {
+      display: table;
+      width: 100%;
+    }
+  }
+
+  .profile-completion,
+  .profile-to-do {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  .profile-completion {
+    margin-bottom: $spacing-lrg;
+  }
+}

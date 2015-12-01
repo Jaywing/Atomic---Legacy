@@ -1,0 +1,151 @@
+//
+//	INPUT TEXT
+//
+//  
+//
+
+$input-font-family: $primary-font;
+$input-font-color: $site-text-color;
+$input-placeholder-font-color: #b8b8b8;
+$input-font-size: 1.2rem;
+$input-line-height: 100%;
+$input-bg-color: map-get($colors, white);
+$input-focus-bg-color: $input-bg-color;
+$input-border-color: #c4c4c4;
+$input-focus-border-color: map-get($brandcolors, grey);
+$input-border-style: solid;
+$input-border-width: 1px;
+$input-border-radius: 0;
+$input-disabled-bg: map-get($colors, lightGrey);
+$input-disabled-cursor: map-get($cursors, default);
+$input-box-shadow: none;
+$input-include-glowing-effect: false;
+// We use this setting to turn on/off HTML5 number spinners (the up/down arrows)
+$input-number-spinners: false;
+$input-transition-fade-time: 0.15s;
+$input-transition-fade-timing-function: linear;
+$input-error-color: map-get($colors, red);
+$input-height: 2.5rem;
+
+@mixin form-element {
+  background-color: $input-bg-color;
+  border: {
+    style: $input-border-style;
+    width: $input-border-width;
+    color: $input-border-color;
+  }
+  box-shadow: $input-box-shadow;
+  color: $input-font-color;
+  display: block;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  //height: ($input-font-size + ($form-spacing * 1.5) - rem-calc(1));
+  margin: 0;
+  padding: 0.5rem 1.333rem 0.25rem 1.333rem;
+  width: 100%;
+  box-sizing: border-box;
+  height: $input-height;
+  @if $input-include-glowing-effect == false {
+    @include transition(all $input-transition-fade-time $input-transition-fade-timing-function);
+  }
+  // Basic focus styles
+  &:focus {
+    background-color: $input-focus-bg-color;
+    border-color: $input-focus-border-color;
+  }
+  // Disabled Styles
+  &:disabled {
+    background-color: $input-disabled-bg;
+    cursor: $input-disabled-cursor;
+  }
+  &.error {
+    border-color: $input-error-color;
+    &:focus, &:hover {
+      border-color: $input-error-color;
+    }
+  }
+  &.input-sml {
+    width: 3.5rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    display: inline-block;
+  }
+
+  // Disabled background input background color
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: $input-disabled-bg;
+    cursor: $input-disabled-cursor;
+  }
+
+  @include placeholder {
+    color: $input-placeholder-font-color;
+    font-family: $primary-font;
+  }
+}
+
+// We use this mixin to turn on/off HTML5 number spinners
+@mixin html5number($browser, $on:true) {
+  @if $on==false {
+    @if $browser==webkit {
+      -webkit-appearance: none;
+      margin: 0;
+    } @else if $browser==moz {
+      -moz-appearance: textfield;
+    }
+  }
+}
+
+#{$all-text-inputs} {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  outline: none;
+
+  @include form-element;
+  @if $input-include-glowing-effect == false {
+    @include transition(all $input-transition-fade-time $input-transition-fade-timing-function);
+  }
+
+  &.input-sml {
+    &:hover, &:focus {
+      padding-left:0.3rem;
+      padding-right: 0.3rem;
+    }
+  }
+
+  &:hover, &:focus {
+    outline: none;
+    background-color: $input-focus-bg-color;
+    border-color: $input-focus-border-color;
+  }
+}
+
+input[type=file] {
+  padding: 0.6rem 0;
+}
+
+.input-button {
+  position: relative;
+  button, .button {
+    position:absolute;
+    top: 0rem;
+    right:0;
+    height: 2.5rem;
+    padding: $spacing-sml;
+    margin-bottom: 0;
+    width: 15%;
+    text-align: center;
+    border-radius: 0;
+    background: transparent;
+    color: map-get($brandcolors, green);
+    &:hover, &:focus {
+      background: transparent;
+      color: map-get($brandcolors, darkGreen);
+    }
+  }
+  input {
+    width:85%;
+  }
+}

@@ -1,0 +1,98 @@
+<form action="#" method="post" id="about-you" class="form-inline form-2-col about-you form-validate" novalidate="novalidate">
+
+    <h2>About you</h2>
+
+    <div>
+
+        <fieldset>
+
+            <div class="field-wrap">
+
+                <div class="field single-col">
+                    <label for="ay-salutation">Salutation <abbr title="Required">*</abbr></label>
+                    <select id="ay-salutation" name="salutation">
+                        <option value="" selected="selected">Select</option>
+                        <option value="mr">Mr</option>
+                        <option value="mrs">Mrs</option>
+                        <option value="miss">Miss</option>
+                        <option value="dr">Dr</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="field-wrap">
+
+                <div class="field">
+                    <label for="ay-first-name">First Name <abbr title="Required">*</abbr></label>
+                    <input type="text" id="ay-first-name" required aria-required="true" min-length="2" name="ay-firstname" placeholder="Joe">
+                </div>
+
+                <div class="field">
+                    <label for="ay-last-name">Last Name <abbr title="Required">*</abbr></label>
+                    <input type="text" id="ay-last-name" required aria-required="true" min-length="2" name="ay-lastname" placeholder="Bloggs">
+                </div>
+
+            </div>
+            
+            <div class="field-wrap">
+
+                <div class="field">
+                    <label for="ay-region">Country / Region <abbr title="Required">*</abbr></label>
+                    <select id="ay-region" name="region">
+                        <option value="" selected="selected">Select</option>
+                        <option value="eng">England</option>
+                        <option value="nire">N.Ireland</option>
+                        <option value="sco">Scotland</option>
+                        <option value="wal">Wales</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="ay-region">County / State <abbr title="Required">*</abbr></label>
+                    <select id="ay-region" name="region">
+                        <option value="" selected="selected">Select</option>
+                        <option value="berks">Berkshire</option>
+                        <option value="hants">Hampshire</option>
+                        <option value="wilt">Wiltshire</option>
+                        <option value="corn">Cornwall</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="field-wrap">
+
+                <div class="field">
+                    <label for="ay-city">City <abbr title="Required">*</abbr></label>
+                    <select id="ay-city" name="city">
+                        <option value="" selected="selected">Select</option>
+                        <option value="london">London</option>
+                        <option value="liverpool">Liverpool</option>
+                        <option value="manchester">Manchester</option>
+                        <option value="birmingham">Birmingham</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="ay-specialism">Specialism <abbr title="Required">*</abbr></label>
+                    <select id="ay-specialism" name="region">
+                        <option value="" selected="selected">Select</option>
+                        <option value="project manager">Project Manager</option>
+                        <option value="developer">Developer</option>
+                        <option value="account manager">Account Manager</option>
+                        <option value="engineer">Engineer</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <div class="form-controls">
+            <button type="submit">Submit</button>
+        </div>
+
+    </div>
+
+</form>

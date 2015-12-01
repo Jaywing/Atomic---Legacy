@@ -1,0 +1,62 @@
+//
+//	PRINT
+//
+//  Import all sass files need to compile print styles
+//
+
+.header,
+.footer,
+.back-to-results,
+.social-media-share,
+.job-search,
+.save-job
+ {
+	display: none;
+}
+
+main:before {
+	display: block;
+	content: 'Thank you for printing our content at tate.co.uk. Please check back soon for more job opportunities.';
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #999;
+	padding: 3px 5px;
+	font-size: italic;
+}
+
+.job-details-meta {
+	.meta-list {
+		margin-bottom: 2rem;
+		li {
+			width:50%;
+			float: left;
+		}
+	}
+}
+
+.mini-bio {
+	margin-top: -1rem;
+	margin-bottom: 2rem;
+	padding: 1rem;
+	.mini-bio-header {
+		padding: 0;
+		margin: 0;
+		h5, h6 {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	.mini-bio-info {
+		zoom: 1;
+		clear:both;
+		&:after {
+			content: '';
+			display: block;
+			clear:both;
+			height: 1;
+		}
+		.mini-bio-info-section {
+			float: left;
+			padding-right: 2rem;
+		}
+	}
+}

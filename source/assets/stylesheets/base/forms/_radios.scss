@@ -1,0 +1,48 @@
+//
+// RADIOS
+//
+//
+$radio-outer-color: rgb(255, 255, 255);
+$radio-inner-color: rgb(68, 68, 68);
+$radio-padding: 0 0 0 1.5rem;
+
+.radio-label {
+  position: relative;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding: $radio-padding;
+
+  &:before,
+  &:after {
+    font-family: $icon-font;
+    @extend %vertically-centered;
+    left: 0;
+  }
+
+  &:before {
+    content: "\e804";
+  }
+  &:after {
+    content: "\e805";
+    color: $radio-outer-color;
+  }
+
+  &:checked {
+    &:before {
+      content: "\e805";
+      color: $radio-outer-color;
+    }
+    &:after {
+      content: "\e806";
+      color: $radio-inner-color;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,22 @@
+//
+//	SKIP TO CONTENT
+//
+//  
+//
+
+.skip-to {
+  @include transition(all 0.33s ease-in-out);
+  display: inline-block;
+  padding: $spacing-sml;
+  border: 1px solid map-get($brandcolors, green);
+  position:absolute;
+  left: -200px;
+  top: -200px;
+  z-index: 150;
+  background: map-get($brandcolors, lightGrey);
+  &:focus {
+    top: 5px;
+    left: 5px;
+    outline: 0;
+  }
+}

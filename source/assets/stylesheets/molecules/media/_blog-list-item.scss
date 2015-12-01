@@ -1,0 +1,17 @@
+//
+//	BLOG LIST ITEM
+//
+//  
+//
+
+
+.blog-list-item {
+  @extend .job-list-item;
+
+  .article-meta {
+    margin-bottom: $spacing-med;
+  }
+  .tag-list {
+    margin-left: -($spacing-sml);
+  }
+}

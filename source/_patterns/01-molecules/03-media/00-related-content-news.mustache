@@ -1,0 +1,19 @@
+<div class="related-content">
+
+    <ol>
+        {{ #latest-news }}
+        <li>
+            <a href="#">
+                <article>
+                    <h3>{{news-headline}}</h3>
+
+                    <date class="meta">{{news-date}}</date>
+                    
+                    <p class="summary">{{news-summary}}</p>
+                </article>
+            </a>
+        </li>
+        {{ /latest-news }}
+    </ol>
+
+</div>

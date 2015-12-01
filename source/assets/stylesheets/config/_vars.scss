@@ -1,0 +1,102 @@
+//
+//	VARS
+//
+//	Global site variables
+//
+
+// Fonts
+$primary-font: 'FF DIN Pro', "Helvetica Neue", Arial, Helvetica, sans-serif;
+$secondary-font: 'FF DIN Pro', "Helvetica Neue", Arial, Helvetica, sans-serif;
+$tertiary-font: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+$monospace-font: Consolas, "Liberation Mono", Courier, monospace;
+$icon-font: 'Iconmoon';
+
+$font-weight-light: 200;
+$font-weight-normal: 300;
+$font-weight-bold: 600;
+
+$font-size-sml: 0.875rem;
+$font-size-tiny: 0.75rem;
+
+// These map to the breakpoints array (further down the page)
+$base-font-sizes: (
+  null: 13px,
+  phoneSml: 14px,
+  tabletLrg: 15px,
+  desktopSml: 16px,
+  desktopLrg: 18px,
+  wideScrSml: 18px,
+  wideScrLrg: 18px
+);
+$base-line-height: 1.45;
+// (24 / 16)
+$vertical-rhythm: 1.45rem;
+// Spacing (24 / 16)
+
+$spacing-lrg: 2rem;
+$spacing-med: $spacing-lrg / 2;
+$spacing-sml: $spacing-lrg / 4;
+
+$spacing-lrg-neg: (-$spacing-lrg);
+$spacing-med-neg: (-$spacing-med);
+$spacing-sml-neg: (-$spacing-sml);
+
+// Colours
+$colors: (
+  white: #fff,
+  black: #000,
+  grey: #666,
+  lightGrey: #f5f5f5,
+  red: #ff0000,
+  green: #00ff00,
+  blue: #2185d0,
+  yellow: #ffff00,
+  turquiose: #00ffff,
+  fuscia: #ff00ff,
+  orange: #FFA500,
+  paleRed: #FFD1D1,
+  paleYellow: #FFF0B0,
+  paleGreen: #DAFFDA
+);
+
+$brandcolors: (
+  //grey: #322e2d,
+  //lightGrey: #595959,
+  //white: #fff,
+  green: #42b5a6,
+  yellow: #f3e60f,
+  darkGreen: #3f9486,
+  lightGreen: #6ec5b7,
+  interGreen: #539f92,
+  black: #3d383c,
+  lightBlack: #474146,
+  grey: #9f9e9c,
+  lightGrey: #f5f5f5,
+  khaki: #e8d6bb,
+  khakiLight: #f5eadd,
+  brown: #715c57,
+  white: #fff,
+);
+
+// Breakpoints (320, 480, 640, 768, 960, 1120, 1280, 1440, 1600)
+$breakpoints: (
+  phoneSml: 20em,
+  phoneLrg: 30em,
+  tabletSml: 40em,
+  tabletLrg: 48em,
+  desktopSml: 60em,
+  desktopMed: 70em,
+  desktopLrg: 80em,
+  wideScrSml: 90em,
+  wideScrLrg: 100em
+);
+
+// Cursors
+$cursors: (
+  crosshair: crosshair,
+  default: default,
+  disabled: not-allowed,
+  pointer: pointer,
+  help: help,
+  text: text
+);

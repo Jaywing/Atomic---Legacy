@@ -1,0 +1,208 @@
+//
+//  FORM LAYOUT
+//
+//
+//
+
+$form-layout-bp: tabletLrg;
+$form-layout-padding: 0 0 $spacing-med;
+$form-layout-field-padding: 0 $spacing-med $spacing-lrg 0;
+
+//Force legend to behave!
+fieldset {
+  > legend {
+    float: left;
+
+    + * {
+      clear: both;
+    }
+  }
+}
+
+.form-inline {
+
+  &.loading {
+    position:relative;
+    &:before {
+      vertical-align: middle;
+      text-align: center;
+      content: '';
+      position:absolute;
+      top:0;
+      left: 0;
+      right:0;
+      bottom: 0;
+      background: rgba(255,255,255,0.7);
+      z-index: 50;
+    }
+    &:after {
+      content: 'Sending...';
+      display: inline-block;
+      padding: $spacing-med;
+      background: rgba(255,255,255,0.9);
+      border: 2px solid map-get($brandcolors, lightGrey);
+      position:absolute;
+      top: 50%;
+      left:50%;
+      @include transform(translateX(-50%) translateY(-50%));
+      z-index:51;
+    }
+  }
+
+  .page-title {
+    margin-top: $spacing-med;
+  }
+  
+  h2 {
+    @extend %h4;
+    margin: 0 0 $spacing-med;
+  }
+  padding: $form-layout-padding;
+
+  fieldset {
+    padding:0;
+  }
+  
+  .alert-box {
+    margin-bottom: $spacing-med;
+    .alert-box-close {
+      display: none;
+    }
+  }
+
+  .form-body {
+    background: map-get($brandcolors, lightGrey);
+    padding: $spacing-med;
+    margin-bottom: $spacing-med;
+    //border-top: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+    //border-bottom: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+
+    @include respond-to(tabletLrg) {
+      margin-left: 0;
+      margin-right: 0;
+
+      &.form-body-2col {
+        @include row;
+        margin-bottom: $spacing-lrg;
+        padding: $spacing-lrg 0 $spacing-med;
+        .form-col {
+          @include cols(1,2);
+          padding: 0 $spacing-lrg;
+          &:first-child {
+            border-right: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+          }
+        }
+      }
+    }
+  }
+
+  .field-col-wrap {
+    &.field-col-wrap-2col {
+      .form-col {
+        p, p:last-child {
+          margin: 0 0 $vertical-rhythm 0;
+        }
+      }
+    }
+
+    @include respond-to(tabletLrg) {
+
+      &.field-col-wrap-2col {
+        @include row;
+        margin-bottom: $spacing-lrg;
+        //padding: $spacing-lrg 0 $spacing-med;
+        .form-col {
+          @include cols(1,2);
+          padding: 0 $spacing-lrg;
+
+          .field {
+            width: 100%;
+            padding-right: 0;
+            &:last-child {
+              padding-bottom: 0;
+            }
+          }
+
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            border-left: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+            padding-right: 0;
+          }
+        }
+      }
+      &.field-col-first {
+        .form-col {
+          &:first-child {
+            border-right: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+          }
+          &:last-child {
+            border:0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-controls {
+  @include clearfix;
+
+  button[type=submit] { float: right; }
+  
+  p, .field { 
+    float: left; 
+    width:65%;
+  }
+
+  .field { padding-top: $spacing-med; }
+}
+
+@include respond-to($form-layout-bp) {
+
+  .form-inline {
+    &.form-2-col {
+      .field {
+        @include cols(1,2);
+      }
+    }
+    &.form-3-col {
+      .field {
+        @include cols(1,3);
+      }
+    }
+    .field-wrap {
+      @include row;
+      .field {
+        padding: $form-layout-field-padding;
+        &:last-child{
+          padding-right: 0;
+        }
+        &.single-col{
+          padding: $form-layout-field-padding;
+        }
+      }
+    }
+    .form-controls {
+      button { 
+        margin: 0;
+      }
+    }
+  }
+
+}
+
+@include respond-to(desktopSml) {
+  .form-inline {
+    .l-container {
+      padding: 0 $spacing-sml;
+    }
+    .page-title {
+      margin-top: 0;
+    }
+  }
+}

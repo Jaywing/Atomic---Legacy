@@ -1,0 +1,29 @@
+<!-- Begin .job-list-section -->
+<section class="job-list-section">
+
+    <header>
+
+        {{> molecules-results-sort-by }}
+
+    </header>
+
+    <ol class="job-list">
+        <li>{{> molecules-job-list-item-featured }}</li>
+        <li>{{> molecules-job-list-item }}</li>
+        <li>{{> molecules-job-list-item-no-logo }}</li>
+        <li>{{> molecules-job-list-item }}</li>
+        <li>{{> molecules-job-list-item-no-logo }}</li>
+    </ol>
+
+    {{> molecules-alert-box-neutral }}
+
+    <footer>
+
+        {{> molecules-pagination }}
+
+        <button>Subscribe to alerts</button>
+
+    </footer>
+
+</section>
+<!-- End .job-list-section -->

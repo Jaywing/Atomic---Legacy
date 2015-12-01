@@ -1,0 +1,75 @@
+<nav id="nav-footer" class="nav-footer" role="navigation">
+
+  <div class="nav-footer-primary">
+    <ul>
+      {{#nav}}
+      <li class="has-children-{{has-children}}">
+        <a href="{{page-url}}">{{page-title}}</a>
+        {{ #has-children }}
+        <ul>
+          {{ #subpages }}
+          <li>
+            <a href="{{page-url}}">{{page-title}}</a>
+          </li>
+          {{ /subpages }}
+        </ul>
+        {{ /has-children }}
+      </li>
+      {{/nav}}
+    </ul>
+
+  </div>
+
+  <div class="nav-footer-branding">
+    <div class="l-container">
+      
+      <div class="logo">
+        <a href="/"><img src="../../assets/images/logo-sml.png" alt="Tate"/></a>
+      </div>
+      
+      <div class="nav-partners">
+        <ul>
+          {{#partners}}
+          <li>
+            <img src="{{partner-logo}}" alt="{{partner-title}}"></li>
+          </li>
+          {{ /partners }}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="nav-footer-secondary">
+
+    <div class="l-container">
+
+      <div class="nav-corporate">
+        <ul>
+          {{#corporate-nav}}
+          <li>
+            <a href="{{page-url}}">{{page-title}}</a></li>
+          </li>
+          {{ /corporate-nav }}
+        </ul>
+      </div>
+
+      <div class="nav-tertiary">
+        <ul>
+          {{#tertiary-nav}}
+          <li>
+            <a href="{{page-url}}">{{page-title}}</a></li>
+          </li>
+          {{ /tertiary-nav }}
+        </ul>
+      </div>
+
+      <p class="copyright">
+        <small>&copy; Company Name. All rights reserved 2015, Registered Address: Albion House, 27 Oxford Street, Newbury, RG14 1JG</small>
+      </p>
+
+    </div>
+
+  </div>
+
+</nav><!--end .nav-->

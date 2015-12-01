@@ -1,0 +1,56 @@
+
+<form action="#" method="post" name="form-quick-apply" id="form-quick-apply" class="form-inline form-2-col form-quick-apply collapsible" novalidate="novalidate">
+
+    <h2>Quick apply</h2>
+
+    <div class="frm-inner">
+
+        <div class="alert-box alert-box-form alert-box-ok is-hidden">
+            <p><i class="icon-bell" aria-hidden="true"></i><span class="message"></span></p>
+            <button class="alert-box-close"><i class="icon-close" aria-hidden="true"></i><span>Close</span></button>
+        </div>
+
+        <div class="alert-box alert-box-form alert-box-error is-hidden">
+            <p><i class="icon-bell" aria-hidden="true"></i><span class="message"></span></p>
+            <button class="alert-box-close"><i class="icon-close" aria-hidden="true"></i><span>Close</span></button>
+        </div>
+
+        <fieldset>
+
+            <div class="field-wrap">
+
+                <div class="field">
+                    <label for="qa-first-name">First Name <abbr title="Required">*</abbr></label>
+                    <input type="text" id="qa-first-name" required aria-required="true" min-length="2" name="qa_firstname" placeholder="Joe">
+                </div>
+
+                <div class="field">
+                    <label for="qa-last-name">Last Name <abbr title="Required">*</abbr></label>
+                    <input type="text" id="qa-last-name" required aria-required="true" min-length="2" name="qa_lastname" placeholder="Bloggs">
+                </div>
+
+            </div>
+
+            <div class="field-wrap">
+
+                <div class="field">
+                    <label for="qa-email">Email Address <abbr title="Required">*</abbr></label>
+                    <input type="email" id="qa-email" name="qa_email" required aria-required="true" placeholder="name@domain.com">
+                </div>
+
+                <div class="field">
+                    <label for="qa-upload">Upload CV <abbr title="Required">*</abbr></label>
+                    <input type="file" id="qa-upload" name="qa_upload" required aria-required="true" />
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <div class="form-controls">
+          <button id="btn-quick-apply" type="submit">Submit</button>
+        </div>
+
+    </div>
+
+</form>

@@ -1,0 +1,40 @@
+//
+//	JOB DETAIL TEMPLATE
+//
+//
+//
+$job-detail-bp-sml : tabletLrg;
+$job-detail-bp-lrg : desktopSml;
+$job-detail-content-padding: $spacing-med;
+
+@include respond-to($job-detail-bp-sml) {
+  .job-detail-wrap {
+    .back-to-search-wrap {
+      display: none;
+    }
+  }
+}
+
+@include respond-to($job-detail-bp-lrg) {
+  .job-detail-wrap {
+    @include row;
+    background: map-get($colors, lightGrey);
+    border-top: 1px solid map-get($colors, lightGrey);
+    border-bottom: 1px solid map-get($colors, lightGrey);
+    margin-bottom: $spacing-lrg;
+
+    .job-detail-sidebar {
+      @include cols(4, 12);
+    }
+
+    .job-detail-section {
+      @include cols(8, 12, $spacing-med);
+      background: map-get($colors, white);
+      padding-top: 0;
+    }
+
+    .job-detail-sidebar, .job-detail-section {
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+//
+//	LATEST TWEET
+//
+//  
+//
+$latest-tweet-font: $primary-font;
+$latest-tweet-txt-transform: none;
+$latest-tweet-plain-txt-colour: map_get($brandcolors, black);
+$latest-tweet-margin: 0 auto;
+$latest-tweet-max-width: 40rem;
+$latest-tweet-align: center;
+$latest-tweet-author-align: center;
+$latest-tweet-icon-size: 1.35rem;
+$latest-tweet-adjustment: -0.4rem;
+$latest-tweet-padding: $spacing-lrg 0;
+
+.latest-tweet {
+  @include clearfix;
+  text-align: $latest-tweet-align;
+  border: 0;
+  max-width: $latest-tweet-max-width;
+  margin: $latest-tweet-margin;
+  padding: $latest-tweet-padding;
+
+  p {
+    margin: 0;
+    font-family: $latest-tweet-font;
+    text-transform: $latest-tweet-txt-transform;
+    color: $latest-tweet-plain-txt-colour;
+  }
+
+  .citation {
+    text-align: $latest-tweet-author-align;
+    margin-bottom: $spacing-med;
+
+    &:before {
+      content: '';
+    }
+    i {
+      padding-right: 0.667rem;
+    }
+    a {
+      @extend %h2;
+      font-family: $latest-tweet-font;
+    }
+    span {
+      font-size: 1.35rem;
+      position: relative;
+      bottom: $latest-tweet-adjustment;
+      left: $latest-tweet-adjustment;
+    }
+  }
+
+}
+
+.tw-holding {
+  overflow: hidden;
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  left: -99999px;
+}

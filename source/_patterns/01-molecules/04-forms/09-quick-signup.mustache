@@ -1,0 +1,40 @@
+<form action="#" method="post" id="form-register" class="form-inline form-login" novalidate="novalidate">
+
+  <h2>Register for an account</h2>
+
+  <fieldset>
+
+    <div class="field">
+      <label for="su-email">Email <abbr title="Required">*</abbr></label>
+      <input type="email" id="su-email" required aria-required="true" min-length="5" name="email" placeholder="name@domain.com">
+    </div>
+
+    <div class="field">
+      <label for="su-password">Password <abbr title="Required">*</abbr></label>
+      <div class="input-button show-hide-pwd">
+        <input type="password" id="su-password" required aria-required="true" min-length="6" name="password" class="password" placeholder="">
+        <button class="button secondary btn-show-hide">
+          <span class="btn-show">Show</span>
+          <span class="btn-hide">Hide</span>
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <label class="checkbox-label">
+        <input type="checkbox" name="remember" id="su-remember">
+        <span> Remember me</span>
+      </label>
+    </div>
+
+  </fieldset>
+
+  <div class="form-controls">
+
+    <p>By signing up for an account you are agreeing to our <a href="#" target="_blank">Terms &amp; Conditions</a></p>
+
+    <button type="submit">Sign up</button>
+
+  </div>
+
+</form>

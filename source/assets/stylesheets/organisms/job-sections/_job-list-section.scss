@@ -1,0 +1,47 @@
+//
+//  JOB LIST SECTION
+//
+//
+$job-list-section-bp: desktopSml;
+$job-list-section-padding: 0 $spacing-med 0 $spacing-med;
+$job-list-section-padding-dt: 0 $spacing-lrg 0 $spacing-lrg;
+$job-list-section-margin: 0 (-$spacing-med);
+$job-list-section-margin-dt: 0 (-$spacing-lrg);
+$job-list-section-bg: map_get($brandcolors, lightGrey);
+$job-list-section-header-margin: 0 (-$spacing-med) $spacing-lrg (-$spacing-med);
+$job-list-section-header-margin-dt: 0 (-$spacing-lrg) $spacing-lrg (-$spacing-lrg);
+
+
+.job-list-section {
+  background: $job-list-section-bg;
+  padding: $job-list-section-padding;
+  margin: $job-list-section-margin;
+
+  > header {
+    margin: 0;
+  }
+
+  @include respond-to($job-list-section-bp) {
+    padding: $job-list-section-padding-dt;
+    margin: $job-list-section-margin-dt;
+
+    > header {
+      margin: $job-list-section-header-margin-dt;
+    }
+  }
+
+  footer {
+    button {
+      margin-bottom: $spacing-lrg;
+    }
+  }
+
+  &.job-list-section-inpage {
+    padding-top: $spacing-lrg;
+    padding-bottom: $spacing-sml;
+    margin-bottom: $spacing-lrg;
+    > header, > footer {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+//
+//	LISTS
+//
+//	
+//
+
+$list-font-family: inherit;
+$list-font-size: 1rem;
+$list-line-height: $base-line-height;
+$list-font-weight: $font-weight-light;
+$list-margin: 0 0 $spacing-lrg 0;
+$list-style-position: outside;
+$list-side-margin: 1.5rem;
+$list-ordered-side-margin: 1.75rem;
+$list-side-margin-no-bullet: 0;
+$list-nested-margin: rem(20);
+$definition-list-header-weight: $font-weight-bold;
+$definition-list-header-margin: 0;
+$definition-list-margin: 0 0 $spacing-med 1.25rem;
+
+ul, ol, dl {
+  font-family: $list-font-family;
+  font-size: $list-font-size;
+  font-weight: $list-font-weight;
+  line-height: $list-line-height;
+  list-style-position: $list-style-position;
+  margin: $list-margin;
+}
+
+ul {
+  margin-left: $list-side-margin;
+  &.no-bullet {
+    margin-left: $list-side-margin-no-bullet;
+    li {
+      ul, ol {
+        margin-left: $list-nested-margin;
+        margin-bottom: 0;
+        list-style: none;
+      }
+    }
+  }
+}
+
+/* Unordered Lists */
+ul {
+  li {
+    ul, ol {
+      margin-left: $list-nested-margin;
+      margin-bottom: 0;
+    }
+  }
+  &.square, &.circle, &.disc {
+    li ul {
+      list-style: inherit;
+    }
+  }
+
+  &.square {
+    list-style-type: square;
+    margin-left: $list-side-margin;
+  }
+  &.circle {
+    list-style-type: circle;
+    margin-left: $list-side-margin;
+  }
+  &.disc {
+    list-style-type: disc;
+    margin-left: $list-side-margin;
+  }
+  &.no-bullet {
+    list-style: none;
+  }
+}
+
+/* Ordered Lists */
+ol {
+  margin-left: $list-ordered-side-margin;
+  li {
+    ul, ol {
+      margin-left: $list-nested-margin;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Definition Lists */
+dl {
+  dt {
+    margin: $definition-list-header-margin;
+    font-weight: $definition-list-header-weight;
+  }
+  dd {
+    margin: $definition-list-margin;
+  }
+}

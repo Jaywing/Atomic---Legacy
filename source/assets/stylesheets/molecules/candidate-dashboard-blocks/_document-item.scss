@@ -1,0 +1,29 @@
+//
+//	JOB LIST ITEM
+//
+//  
+//
+
+$document-list-item-bp: tabletLrg;
+
+$document-list-item-padding: $spacing-med;
+$document-list-item-margin: 0;
+$document-list-item-border-bottom: 1px solid map-get($colors, lightGrey);
+$document-list-item-header-margin: 0 0 $spacing-sml;
+$document-list-item-details-padding: 0;
+$document-list-icon-font-size: 2rem;
+$document-list-summary-max-width: 45rem;
+$document-list-related-meta-padding: $spacing-med 0;
+
+.documents-list {
+  margin: 0;
+}
+
+.document-list-item {
+  //padding:        $document-list-item-padding;
+  border-bottom:  $document-list-item-border-bottom;
+  //margin:         $document-list-item-margin;
+  .list-item-summary {
+    border: 0;
+  }
+}

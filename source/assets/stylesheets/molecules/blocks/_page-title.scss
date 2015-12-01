@@ -1,0 +1,52 @@
+//
+// PAGE TITLE
+//
+//
+
+$page-title-bp: tabletLrg;
+$page-title-padding: 0 0 $spacing-med 0;
+$page-title-padding-md: $spacing-med 0 $spacing-med 0;
+$page-title-padding-dt: $spacing-lrg 0 $spacing-med 0;
+$page-title-margin: 0 0 $spacing-lrg 0;
+$page-title-border: 1px solid map_get($brandcolors, lightGrey);
+$page-title-col-padding: 0;
+
+.page-title {
+	padding: $page-title-padding;
+  margin: $page-title-margin;
+  border-bottom: $page-title-border;
+
+  h1 {
+  	margin: 0;
+  }
+
+  .meta {
+    margin: 0;
+  }
+
+  &.job-list-item {
+    position: relative;
+    padding-top: $spacing-med;
+    padding-right: $spacing-lrg;
+    margin-bottom: $spacing-sml;
+    .save-job {
+      position: absolute;
+      top: $spacing-med;
+      right: 0;
+    }
+  }
+
+  @include respond-to($page-title-bp) {
+    padding: $page-title-padding-md;
+  }
+
+  @include respond-to(desktopSml) {
+    padding: $page-title-padding-dt;
+  }
+}
+
+main {
+  > .page-title {
+    @extend %container;
+  }
+}

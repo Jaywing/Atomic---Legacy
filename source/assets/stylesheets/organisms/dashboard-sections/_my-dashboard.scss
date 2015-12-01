@@ -1,0 +1,28 @@
+//
+// MY DASHBOARD
+//
+//
+
+$dashboard-block-padding: $spacing-med;
+$dashboard-block-view-spacing: $spacing-sml;
+$dashboard-block-h-spacing: 0 0 $spacing-sml 0;
+$dashboard-block-p-spacing: 0 0 $spacing-sml 0;
+
+.dashboard-block {
+  //padding: $dashboard-block-padding;
+
+  .dashboard-block-view,
+  h3 {
+    margin: $dashboard-block-h-spacing;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  p {
+    margin: $dashboard-block-p-spacing;
+  }
+
+  .dashboard-block-view {
+    margin-left: $dashboard-block-view-spacing;
+  }
+}

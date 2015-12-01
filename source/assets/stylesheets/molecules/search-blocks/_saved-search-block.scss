@@ -1,0 +1,83 @@
+//
+// SAVED SEARCH BLOCK
+//
+//
+
+$saved-search-editable-icon-spacing: 0 0 0 $spacing-sml;
+$saved-search-terms-spacing: $spacing-med 0;
+$saved-search-inner-padding: 0;
+$saved-search-outer-padding: $spacing-med;
+$saved-search-save-top-position: $spacing-med;
+$saved-search-notifications-top-position: $spacing-med * 5;
+$saved-search-notifications-right-position: $spacing-med;
+$saved-search-disabled-color: map_get($colors, lightGrey);
+
+.saved-search {
+  padding: $saved-search-outer-padding;
+
+  .saved-search-inner {
+    position: relative;
+    padding: $saved-search-inner-padding;
+  }
+
+  .save-search,
+  .enable-notifications {
+    position: absolute;
+    right: $saved-search-notifications-right-position;
+  }
+
+  .save-search {
+    position: absolute;
+    top: $saved-search-save-top-position;
+  }
+
+  .enable-notifications {
+    top: $saved-search-notifications-top-position;
+  }
+
+  &.location-not-specified {
+    .location {
+      color: $saved-search-disabled-color;
+    }
+  }
+
+  &.salary-not-specified {
+    .salary {
+      color: $saved-search-disabled-color;
+    }
+  }
+
+  &.recent-search {
+    .saved-search-terms {
+      padding-top: 0;
+    }
+  }
+}
+
+.saved-search-terms {
+  padding: $saved-search-terms-spacing;
+}
+
+.editable {
+  label {
+    @extend %visuallyhidden;
+  }
+
+  .field {
+    display: none;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  i {
+    padding: $saved-search-editable-icon-spacing;
+  }
+
+  .editable-content, a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+

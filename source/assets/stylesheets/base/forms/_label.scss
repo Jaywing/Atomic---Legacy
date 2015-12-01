@@ -1,0 +1,73 @@
+//
+//	LABEL
+//
+//  
+//
+
+$form-label-cursor: map-get($cursors, pointer);
+$form-label-font-size: 1rem;
+$form-label-font-weight: $font-weight-normal;
+$form-label-line-height: $base-line-height;
+$form-label-font-color: $site-text-color;
+$form-label-small-transform: capitalize;
+$form-label-margin: 0 0 rem(4);
+$form-label-required-color: map-get($colors, red);
+$form-label-error-color: map-get($colors, red);
+
+// @MIXIN
+//
+// We use this mixin to create form labels
+//
+// $alignment - Alignment options. Default: false. Options: [right, inline, false]
+// $base-style - Control whether or not the base styles come through. Default: true.
+@mixin form-label($alignment:false, $base-style:true) {
+
+  // Control whether or not the base styles come through.
+  @if $base-style {
+    color: $form-label-font-color;
+    cursor: $form-label-cursor;
+    display: block;
+    font-size: $form-label-font-size;
+    font-weight: $form-label-font-weight;
+    line-height: $form-label-line-height;
+    margin: $form-label-margin;
+  }
+
+  // Alignment options
+  @if $alignment == right {
+    float: none !important;
+    text-align: right;
+  } @else if $alignment == inline {
+    margin: 0 0 $form-spacing 0;
+    //padding: 	$form-spacing / 2 + rem-calc($input-border-width) 0;
+  }
+}
+
+/* Label Styles */
+label {
+  @include form-label;
+  &.right {
+    @include form-label(right, false);
+  }
+  &.inline {
+    @include form-label(inline, false);
+  }
+  /* Styles for required inputs */
+  small {
+    text-transform: $form-label-small-transform;
+    color: lighten($form-label-font-color, 15%);
+  }
+  &.error {
+    color: $form-label-error-color;
+    font-size: $font-size-sml;
+    padding-top: rem(4);
+  }
+  &.inline {
+    display: inline-block;
+  }
+}
+
+abbr[title="Required"] {
+  color: $form-label-required-color;
+  border-bottom: 0 !important;
+}

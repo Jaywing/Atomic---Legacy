@@ -1,0 +1,75 @@
+//
+//	SITEMAP LIST
+//
+//  
+//
+
+
+.sitemap {
+  margin: 0 -0.33rem;
+  padding: 0 0 $spacing-lrg;
+  list-style: none;
+  a {
+    display: block;
+    padding:0.33rem;
+    &:hover, &:focus {
+      background: map-get($brandcolors, lightGrey);
+    }
+  }
+  > li {
+    font-size: 1.25rem;
+    padding:0 0 1rem;
+    > a {
+      border-bottom: 1px solid map-get($brandcolors, lightGrey);
+    }
+    > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@include respond-to(phoneLrg) {
+  .sitemap {
+    @include clearfix;
+    margin:0;
+    > li {
+      float:left;
+      width:48%;
+      clear:left;
+      &:nth-child(even) {
+        float:right;
+        clear:right;
+      }
+    }
+  }
+}
+
+@include respond-to(tabletLrg) {
+  .sitemap {
+    width: 75%;
+  }
+}
+
+@include respond-to(desktopSml) {
+    .sitemap {
+      width:100%;
+      > li {
+        float:left;
+        width: 32%;
+        margin-right:1%;
+        clear:none;
+        &:nth-child(even) {
+          float:left;
+          clear:none;
+        }
+        &:nth-child(3n+1) {
+          clear:left !important;
+        }
+      }
+    }
+}

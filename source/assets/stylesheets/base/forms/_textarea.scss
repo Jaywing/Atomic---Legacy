@@ -1,0 +1,9 @@
+$textarea-min-height: 10vh;
+$textarea-min-height-dt: 20vh;
+
+textarea {
+  min-height: $textarea-min-height;
+  @include respond-to(tabletLrg) {
+  	min-height: $textarea-min-height-dt;
+  }
+}

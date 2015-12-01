@@ -1,0 +1,36 @@
+//
+// NEWSLETTER PREFERENCES
+//
+//
+$newsletter-preferences-prefs-bp: tabletLrg;
+$newsletter-preferences-label-spacing: 0 0 $spacing-lrg 0;
+$newsletter-preferences-checkbox-spacing: $spacing-med 0 0 0;
+$newsletter-preferences-padding: $spacing-sml $spacing-med $spacing-med $spacing-med;
+$newsletter-preferences-padding-dt: $spacing-med $spacing-lrg $spacing-lrg $spacing-lrg;
+
+.newsletter-prefs {
+  padding: $newsletter-preferences-padding !important;
+  background: map_get($brandcolors, lightGrey);
+  //border-top: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+  //border-bottom: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+  margin-left: -$spacing-med;
+  margin-right: -$spacing-med;
+
+  strong {
+    display: block;
+  }
+
+  .newsletter-opt-in {
+    margin: $newsletter-preferences-label-spacing;
+
+    > label {
+      margin: $newsletter-preferences-checkbox-spacing;
+    }
+  }
+
+  @include respond-to($newsletter-preferences-prefs-bp) {
+    padding: $newsletter-preferences-padding-dt !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

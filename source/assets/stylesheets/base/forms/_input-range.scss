@@ -1,0 +1,165 @@
+//
+//	INPUT RANGE
+//
+//  
+//
+$range-slider-border-width: 3px;
+$range-slider-border-colour: map_get($brandcolors, white);
+$range-slider-border-style: solid;
+$range-slider-center-colour: map_get($brandcolors, green);
+$range-slider-width: 24px;
+$range-slider-height: 24px;
+
+$range-track-colour: map_get($brandcolors, white);
+$range-track-border-radius: 0;
+$range-track-border-width: 0;
+$range-track-border-colour: transparent;
+$range-track-border-style: none;
+$range-track-width: 3px;
+
+input[type=range] {
+  margin: 0.125rem 0;
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-width: $range-slider-border-width;
+  border-color: $range-slider-border-colour;
+  border-style: $range-slider-border-style;
+  height: $range-slider-height;
+  width: $range-slider-width;
+  border-radius: 100%;
+  background: $range-slider-center-colour;
+  cursor: pointer;
+  margin-top: -11px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border-width: $range-slider-border-width;
+  border-color: $range-slider-border-colour;
+  border-style: $range-slider-border-style;
+  height: $range-slider-height;
+  width: $range-slider-width;
+  border-radius: 100%;
+  background: $range-slider-center-colour;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border-width: $range-slider-border-width;
+  border-color: $range-slider-border-colour;
+  border-style: $range-slider-border-style;
+  height: $range-slider-height;
+  width: $range-slider-width;
+  border-radius: 100%;
+  background: $range-slider-center-colour;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: $range-track-width;
+  cursor: pointer;
+  background: $range-track-colour;
+  border-style: $range-track-border-style;
+  border-color: $range-track-border-colour;
+  border-radius: $range-track-border-radius;
+  border-width: $range-track-border-width;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: $range-track-colour;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: $range-track-width;
+  cursor: pointer;
+  background: $range-track-colour;
+  border-style: $range-track-border-style;
+  border-color: $range-track-border-colour;
+  border-radius: $range-track-border-radius;
+  border-width: $range-track-border-width;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: $range-track-width;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: $range-track-colour;
+  border-style: $range-track-border-style;
+  border-color: $range-track-border-colour;
+  border-radius: $range-track-border-radius;
+  border-width: $range-track-border-width;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: $range-track-colour;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: $range-track-colour;
+  border-style: $range-track-border-style;
+  border-color: $range-track-border-colour;
+  border-radius: $range-track-border-radius;
+  border-width: $range-track-border-width;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: $range-track-colour;
+}
+
+output {
+  display: inline-block;
+}
+
+//Fix range input for IE9
+.lt-ie10 {
+  input[type="range"] {
+    width: 100% !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    @include form-element;
+    @if $input-include-glowing-effect == false {
+      @include transition(all $input-transition-fade-time $input-transition-fade-timing-function);
+    }
+    &:hover, &:focus {
+      background-color: $input-focus-bg-color;
+      border-color: $input-focus-border-color;
+    }
+  }
+
+  .range-display {
+    display: none !important;
+  }
+}

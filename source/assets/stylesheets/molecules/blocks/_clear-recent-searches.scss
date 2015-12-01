@@ -1,0 +1,12 @@
+//
+// CLEAR RECENT SEARCHES
+//
+//
+
+$clear-recent-searches-padding: $spacing-lrg 0 $spacing-med 0;
+$clear-recent-searches-alignment: right;
+
+.clear-recent-searches {
+  text-align: $clear-recent-searches-alignment;
+  padding: $clear-recent-searches-padding;
+}

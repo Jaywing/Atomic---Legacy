@@ -1,0 +1,21 @@
+//
+//	JOBS LIST SECTION
+//
+//
+
+.job-list-section {
+	footer {
+		text-align: center;
+		> button {
+			margin: 0 auto;
+		}
+		@include respond-to(tabletLrg) {
+			text-align: left;
+			> button {
+				margin-left: $spacing-sml;
+				margin-top: -($spacing-sml);
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,88 @@
+//
+//	MINI BIO DETAILS
+//
+//
+//
+
+$mini-bio-bp: tabletSml;
+$mini-bio-bg: map_get($colors, lightGrey);
+$mini-bio-border: 2px solid map_get($brandcolors, khaki);
+$mini-bio-border-top: 7px solid map_get($brandcolors, khaki);
+$mini-bio-img-spacing : $spacing-sml;
+$mini-bio-padding: $spacing-med;
+$mini-bio-heading-primary-font-size: $font-size-sml;
+$mini-bio-heading-primary-margin: 0 0 0.125rem;
+$mini-bio-heading-secondary-font-size: 1.2rem;
+$mini-bio-heading-secondary-margin: 0;
+$mini-bio-text-font-size: $font-size-sml;
+
+.mini-bio {
+  //background: $mini-bio-bg;
+  border: $mini-bio-border;
+  border-top: $mini-bio-border-top;
+  padding: $mini-bio-padding;
+  margin-bottom: $spacing-lrg;
+  margin-top: $spacing-med;
+  position: relative;
+
+  header {
+    margin-bottom: $spacing-med;
+    padding-left: 3.5rem;
+
+    h5, h6 {
+      @extend %h4;
+      display: inline;
+    }
+  }
+
+  .mini-bio-avatar {
+    position: absolute;
+    top:-0.5rem;
+    left:0.2rem;
+  }
+
+  .mini-bio-info-section {
+    padding-top: $spacing-sml;
+    span {
+      font-family: $secondary-font;
+    }
+  }
+
+  @include respond-to($mini-bio-bp) {
+    header {
+      padding-left:0;
+    }
+    .mini-bio-info {
+      display: table;
+
+      .mini-bio-info-section {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 $spacing-lrg;
+        border-left: 1px solid map_get($brandcolors, grey);
+
+        i {
+          display: block;
+          padding-bottom: ($spacing-sml / 2);
+        }
+      }
+
+      .mini-bio-avatar {
+        border: 0;
+        padding-left: 0;
+        position:static;
+
+        .user-status-avatar {
+          float: none;
+          margin: 0;
+          position: static;
+        }
+      }
+
+      .mini-bio-info-email-wrap {
+        padding-right: 0;
+      }
+    }
+  }
+
+}

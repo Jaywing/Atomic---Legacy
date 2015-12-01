@@ -1,0 +1,35 @@
+//
+//	LATEST NEWS SECTION
+//
+//  
+//
+
+$latest-news-bp: tabletLrg;
+$latest-news-section-align: center;
+$latest-news-heading-margin: 0 0 $spacing-sml;
+$latest-news-heading-font-family: $primary-font;
+
+.latest-news-section {
+
+  padding-top: $spacing-lrg;
+
+  text-align: $latest-news-section-align;
+
+  h2 {
+    margin: $latest-news-heading-margin;
+  }
+
+  @include respond-to($latest-news-bp) {
+
+    .l-container {
+      @extend %container;
+
+      .more {
+        margin-top: $spacing-med;
+      }
+
+    }
+
+  }
+
+}

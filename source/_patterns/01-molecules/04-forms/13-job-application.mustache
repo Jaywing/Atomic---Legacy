@@ -1,0 +1,169 @@
+
+<form action="#" method="post" id="job-application" class="form-inline job-application form-validate" novalidate="novalidate">
+
+    <header>
+        <div class="page-title">
+            <h1>Job Application</h1>
+        </div>
+        
+        <h2><a href="#">Graduate UI / Frontend Developer (Javascript CSS HTML)</a></h2>
+
+        <table class="meta-table">
+            <tr>
+                <th>Job Ref:</th>
+                <td>896746312</td>
+            </tr>
+            <tr>
+                <th>Sector:</th>
+                <td>Marketing</td>
+            </tr>
+            <tr>
+                <th>Date Added:</th>
+                <td>28 October 2015</td>
+            </tr>
+        </table>
+
+    </header>
+
+    <section class="form-body form-body-2col">
+
+        <fieldset class="form-col">
+
+            <div class="field">
+                <label for="ja-salutation">Salutation <abbr title="Required">*</abbr></label>
+                <select id="ja-salutation" required aria-required="true" name="salutation">
+                    <option value="" selected="selected">Select</option>
+                    <option value="mr">Mr</option>
+                    <option value="mrs">Mrs</option>
+                    <option value="miss">Miss</option>
+                    <option value="dr">Dr</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="ja-first-name">First Name <abbr title="Required">*</abbr></label>
+                <input type="text" id="ja-first-name" required aria-required="true" min-length="2" name="ja-firstname" placeholder="Joe">
+            </div>
+
+            <div class="field">
+                <label for="ja-last-name">Last Name <abbr title="Required">*</abbr></label>
+                <input type="text" id="ja-last-name" required aria-required="true" min-length="2" name="ja-lastname" placeholder="Bloggs">
+            </div>
+
+            <div class="field">
+                <label for="ja-email">Email Address <abbr title="Required">*</abbr></label>
+                <input type="email" id="ja-email" name="jaemail" required aria-required="true" placeholder="Eg. myname@mydomain.com">
+            </div>
+
+        </fieldset>
+
+        <fieldset class="form-col">
+
+            <div class="field single-col">
+                <label for="ja-covering-letter">Covering letter <abbr title="Required">*</abbr></label>
+                <textarea id="ja-covering-letter" name="jacoveringletter" required aria-required="true"></textarea>
+            </div>
+
+        </fieldset>
+
+    </section>
+
+    <h2>Attach / Upload CV</h2>
+    <section class="form-body form-body-2col">
+        <fieldset class="form-col">
+            <div class="field">
+                <label for="ja-upload-cv-lib">Attach CV from library </label>
+                <select id="ja-upload-cv-lib" name="uploadcvlib">
+                    <option value="" selected="selected">Select</option>
+                    <option value="cv-bus-driver">CV bus driver</option>
+                    <option value="cv-hgv-driver">CV HGV driver</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-col">
+            <div class="field">
+                <label for="ja-upload-cv">Upload CV <abbr title="Required">*</abbr></label>
+                <input type="file" id="ja-upload-visa" name="ja_uploadcv" required aria-required="true">
+            </div>
+        </fieldset>
+
+    </section>
+
+    <h2>Attach / Upload VISA</h2>
+    <section class="form-body form-body-2col">
+        <fieldset class="form-col">
+            <div class="field">
+                <label for="ja-upload-visa-lib">Attach visa from library </label>
+                <select id="ja-upload-visa-lib" name="uploadvisalib">
+                    <option value="" selected="selected">Select</option>
+                    <option value="cv-bus-driver">UK Visa</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-col">
+            <div class="field">
+                <label for="ja-upload-visa">Upload Visa</label>
+                <input type="file" id="ja-upload-visa" name="ja_uploadvisa">
+            </div>
+        </fieldset>
+
+    </section>
+
+    <!--<fieldset>
+        <div class="tabs">
+            <ul>
+                <li><a href="#tabs-1">Attach CV from Document Library</a></li>
+                <li><a href="#tabs-2">CV Upload</a></li>
+            </ul>
+            <div id="tabs-1">
+                <div class="field single-col">
+                    <label for="ja-upload-cv-lib">Attach CV from library </label>
+                    <select id="ja-upload-cv-lib" name="uploadcvlib">
+                        <option value="" selected="selected">Select</option>
+                        <option value="cv-bus-driver">CV bus driver</option>
+                        <option value="cv-hgv-driver">CV HGV driver</option>
+                    </select>
+                </div>
+            </div>
+            <div id="tabs-2">
+                <div class="field single-col">
+                    <label for="ja-upload-cv">Upload CV</label>
+                    <input type="file" id="ja-upload-visa" name="ja_uploadcv" aria-required="true">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <div class="tabs">
+            <ul>
+                <li><a href="#tabs-1">Attach Visa from Document Library</a></li>
+                <li><a href="#tabs-2">Visa Upload</a></li>
+            </ul>
+            <div id="tabs-1">
+                <div class="field">
+                    <label for="ja-upload-visa-lib">Attach visa from library </label>
+                    <select id="ja-upload-visa-lib" name="uploadvisalib">
+                        <option value="" selected="selected">Select</option>
+                        <option value="cv-bus-driver">UK Visa</option>
+                    </select>
+                </div>
+            </div>
+            <div id="tabs-2">
+                <div class="field">
+                    <label for="ja-upload-visa">Upload Visa</label>
+                    <input type="file" id="ja-upload-visa" name="ja_uploadvisa" aria-required="true">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+-->
+    <div class="form-controls">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt vel ante in rutrum. Donec eget vehicula nisi, <a href="#" target="_blank">terms</a> tempor sagittis mauris <a href="#" target="_blank">privacy</a> tincidunt quis.</p>
+
+        <button id="btn-apply" type="submit">Apply</button>
+    </div>
+
+</form>

@@ -1,0 +1,52 @@
+//
+//	SPECIALISM NAV
+//
+//  
+//
+
+$nav-specialism-max-width: 48rem;
+$nav-specialism-margin: -0.125rem auto 0 auto;
+$nav-specialism-text-align: center;
+$nav-specialism-item-padding: 0.150rem $spacing-med;
+$nav-specialism-bg: map_get($brandcolors, khaki);
+$nav-specialism-bg: rgba(232,214,187,0.5);
+$nav-specialism-bg-hover: rgba(232,214,187,1);
+$nav-specialism-item-margin: $spacing-sml;
+$nav-specialism-list-item-margin: 0 -0.125rem; //Fix inline block spacing (2px)
+$nav-specialism-item-text-color: map_get($brandcolors, brown);
+$nav-specialism-item-text-color-hover: map_get($brandcolors, brown);
+$nav-specialism-item-border-radius:50px;
+
+.nav-specialism {
+  list-style: none;
+  text-align: $nav-specialism-text-align;
+  max-width: $nav-specialism-max-width;
+  margin: $nav-specialism-margin;
+
+  .nav-specialism-list-item {
+    display: inline-block;
+    margin: $nav-specialism-list-item-margin;
+  }
+
+  .nav-specialism-item {
+    display: block;
+    margin: $nav-specialism-item-margin;
+    padding: $nav-specialism-item-padding;
+    background: $nav-specialism-bg;
+    border-radius: $nav-specialism-item-border-radius;
+
+    .nav-specialism-text {
+      display: block;
+      color: $nav-specialism-item-text-color;
+      font-size: 1.24rem;
+    }
+
+    &:hover {
+      background: $nav-specialism-bg-hover;
+
+      .nav-specialism-text {
+        color: $nav-specialism-item-text-color-hover;
+      }
+    }
+  }
+}

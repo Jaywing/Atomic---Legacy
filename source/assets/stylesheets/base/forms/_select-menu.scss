@@ -1,0 +1,102 @@
+//
+//	SELECT MENU
+//
+//  
+//
+
+$select-bg-color: map-get($colors, white);
+$select-hover-bg-color: darken($select-bg-color, 3%);
+$select-border-radius: $input-border-radius;
+$select-error-color: map-get($colors, red);
+$select-disabled-color: map-get($colors, grey);
+$select-height: 2.5rem;
+$select-padding: 0.3rem 1.333rem 0.25rem 1.333rem;
+
+// We use this mixin to style select elements
+@mixin form-select {
+  background-color: $select-bg-color;
+  border-radius: 0;
+
+  // Hide the dropdown arrow shown in newer IE versions
+  background-repeat: no-repeat;
+  border: {
+    style: $input-border-style;
+    width: $input-border-width;
+    color: $input-border-color;
+  }
+  color: $input-font-color;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  line-height: normal;
+  width: 100%;
+  padding: $select-padding;
+  height: $input-height;
+  &.radius {
+    border-radius: $select-border-radius
+  }
+  &:hover {
+    background-color: $select-hover-bg-color;
+    border-color: $input-focus-border-color;
+  }
+  // Disabled Styles
+  &:disabled {
+    background-color: $input-disabled-bg;
+    cursor: $input-disabled-cursor;
+    color: $select-disabled-color;
+  }
+  &.select-sml {
+    display: inline-block;
+    padding-left:0;
+    padding-right:0;
+    width:auto;
+    position: relative;
+  }
+  // Basic focus styles
+  &:focus {
+    background-color: $input-focus-bg-color;
+    border-color: $input-focus-border-color;
+    outline: none;
+  }
+  &.error {
+    border-color: $select-error-color;
+    &:focus, &:hover {
+      border-color: $select-error-color;
+    }
+  }
+}
+
+/* Add height value for select elements to match text input height */
+select {
+  @include form-select;
+  &[multiple] {
+    height: auto;
+  }
+}
+
+
+.f-select {
+  @include clearfix;
+  position:relative;
+  &:before {
+    @extend %vertically-centered;
+    content: '\e801';
+    font-family: $icon-font;
+    display: inline-block;
+    right: rem(6);
+    margin-top:0;
+    color:map-get($brandcolors, green);
+    z-index:10;
+    font-size: rem(13);
+    @include respond-to(desktopSml) {
+      right: rem(7);
+      font-size: rem(11);
+    }
+    @include respond-to(wideScrSml) {
+      right: rem(5);
+      font-size: rem(11);
+    }
+  }
+  select {
+    @include appearance(none);
+  }
+}

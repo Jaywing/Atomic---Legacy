@@ -1,0 +1,37 @@
+//
+// GENERIC CONTENT / ARTICLE CONTENT
+//
+//
+$generic-content-bp: desktopSml;
+$content-padding: $spacing-med;
+
+.col-main {
+  article {
+    background: map_get($brandcolors, white);
+
+    ul {
+      li {
+        margin-bottom: $spacing-sml;
+      }
+    }
+  }
+}
+
+main {
+  > article {
+    @extend %container;
+    padding: 0 $spacing-med;
+  }
+}
+
+.content-article {
+  padding: $content-padding;
+}
+
+@include respond-to($generic-content-bp) {
+  main {
+    > article {
+      padding: 0;
+    }
+  }
+}

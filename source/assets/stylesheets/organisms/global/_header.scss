@@ -1,0 +1,105 @@
+//
+//	HEADER
+//
+//  
+//
+
+$header-bp: tabletLrg;
+$header-logo-max-height: 3.0555556rem;
+$header-logo-width: 60%;
+
+.header {
+  position: relative;
+  border-bottom: 1px solid map-get($brandcolors, lightGrey);
+
+  .l-container {
+    @extend %container;
+    min-height: 3.5rem;
+    position: relative;
+    padding: 0 $spacing-med;
+  }
+
+  // center aligned logo in mobile view
+  .logo {
+    @include transform(translateX(-50%));
+    display:    inline-block;
+    position:   absolute;
+    top:        rem(3);
+    left:       50%;
+    width:      $header-logo-width;
+    text-align: center;
+    z-index: 115;
+    padding-top: rem(3);
+    img {
+      height:     $header-logo-max-height;
+      max-height: $header-logo-max-height;
+      margin:     0 auto;
+      width:      auto;
+    }
+    .logo-lrg {
+      display: none;
+    }
+  }
+
+  // user status positioned to the right
+  .user-status {
+    position:absolute;
+    top: 0;
+    right: 0;
+    z-index: 115;
+    height: 56px;
+    width: 56px;
+    margin: 0;
+    padding-top: 0px;
+    .user-status-inner {
+      
+    }
+  }
+
+  // Desktop view
+  @include respond-to($header-bp) {
+
+    border-bottom: 0;
+
+    // logo left aligned on desktop view
+    .logo {
+      @include transform(translateX(0%));
+      position:       static;
+      width:          auto;
+      text-align:     left;
+      margin-bottom:  -0.4rem; // remove margin for inline-block
+      padding: 0.695rem $spacing-sml;
+      top:0;
+      img {
+        margin:     0;
+        max-height: auto;
+      }
+      .logo-lrg {
+        display: block;
+      }
+      .logo-sml {
+        display: none;
+      }
+    }
+
+    .user-status {
+      right: 0;
+      bottom:0;
+      width: auto;
+      height: auto;
+      padding: $spacing-sml;
+      font-size: 1.125rem;
+    }
+
+  }
+
+  @include respond-to(tabletLrg) {
+    .l-container {
+      padding-left: 0;
+    }
+    .logo {
+      padding-left: 0;
+    }
+  }
+
+}

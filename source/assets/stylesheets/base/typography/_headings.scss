@@ -1,0 +1,67 @@
+//
+//	HEADINGS
+//
+//	
+//
+
+$heading-font: $secondary-font;
+$heading-weight: $font-weight-normal;
+$heading-font-style: normal;
+$heading-font-color: map-get($brandcolors, black);
+$heading-line-height: 1.3; //Same as lead para
+$heading-margin: 0 0 $vertical-rhythm 0;
+$heading-text-rendering: optimiseLegibility;
+$heading-small-color: lighten($heading-font-color, 25%);
+
+// Font sizes
+$h1-font-size: 1.7rem;
+$h2-font-size: 1.6rem;
+$h3-font-size: 1.333rem;
+$h4-font-size: 1.2rem;
+$h5-font-size: 1.1rem;
+$h6-font-size: 1rem;
+
+$subheading-font: $primary-font;
+$subheading-line-height: $base-line-height;
+$subheading-color: map-get($colors, grey);
+$subheading-weight: $font-weight-bold;
+$subheading-margin: 0 0 $vertical-rhythm 0;
+
+h1, h2, h3, h4, h5, h6,
+%h1, %h2, %h3, %h4, %h5, %h6 {
+  font-family: $heading-font;
+  margin: $heading-margin;
+  font-weight: $heading-weight;
+  font-style: $heading-font-style;
+  line-height: $heading-line-height;
+  text-rendering: $heading-text-rendering;
+
+  small {
+    color: $heading-small-color;
+  }
+
+}
+
+h1, %h1 {
+  font-size: $h1-font-size;
+}
+
+h2, %h2 {
+  font-size: $h2-font-size;
+}
+
+h3, %h3 {
+  font-size: $h3-font-size;
+}
+
+h4, %h4 {
+  font-size: $h4-font-size;
+}
+
+h5, %h5 {
+  font-size: $h5-font-size;
+}
+
+h6, %h6 {
+  font-size: $h6-font-size;
+}

@@ -1,0 +1,49 @@
+<fieldset class="general-enquiry">
+
+    <legend>General enquiry</legend>
+
+    <div class="field-wrap field-col-wrap field-col-wrap-2col field-col-first">
+
+        <div class="form-col">
+
+            <div class="field">
+                <label for="ge-equiry-type">Query type <abbr title="Required">*</abbr></label>
+                <select id="ge-enquiry-type" name="ge-enquiry-type">
+                    <option>Select an option</option>
+                    <option value="job">Job Query</option>
+                    <option value="timesheet">Timesheet Query</option>
+                    <option value="clientServices">Client Services Query</option>
+                    <option value="managedServices">Managed Services Query</option>
+                    <option value="siteFeedback">Site feedback</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="ge-first-name">First Name <abbr title="Required">*</abbr></label>
+                <input type="text" id="ge-first-name" required aria-required="true" min-length="2" name="ge-firstname" placeholder="Joe">
+            </div>
+
+            <div class="field">
+                <label for="ge-last-name">Last Name <abbr title="Required">*</abbr></label>
+                <input type="text" id="ge-last-name" required aria-required="true" min-length="2" name="ge-lastname" placeholder="Bloggs">
+            </div>
+
+            <div class="field">
+                <label for="ge-email">Email address <abbr title="Required">*</abbr></label>
+                <input type="email" id="ge-email" required aria-required="true" min-length="2" name="ge-email" placeholder="name@domain.com">
+            </div>
+
+        </div>
+
+        <div class="form-col">
+
+            <div class="field">
+                <label for="ge-message">Message <abbr title="Required">*</abbr></label>
+                <textarea id="ge-message" name="ge-message" required aria-required="true"></textarea>
+            </div>
+
+        </div>
+
+    </div>
+    
+</fieldset>

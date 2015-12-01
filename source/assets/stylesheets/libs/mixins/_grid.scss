@@ -1,0 +1,38 @@
+//
+//	GRID MIXINS
+//
+//	
+//
+
+@mixin row( $width: 100%, $padding: 0, $margin: 0 auto ) {
+  @include clearfix;
+  max-width: $width;
+  width: 100%;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin cols(
+  $colspan: 1,
+  $totalcols: 12,
+  $padding: 0,
+  $gutter: 0,
+  $edge: false,
+  $margintop: 0,
+  $marginbottom: 0
+) {
+
+  $totalgutter: ($totalcols - 1) * $gutter;
+  $spannedgutters: ($colspan - 1) * $gutter;
+
+  width: ( $colspan * ((100 - $totalgutter) / $totalcols)) + $spannedgutters + 0%;
+  float: left;
+  padding: $padding;
+
+  @if $edge {
+    margin-right: 0;
+  } @else {
+    margin-right: $gutter + 0%;
+  }
+
+}

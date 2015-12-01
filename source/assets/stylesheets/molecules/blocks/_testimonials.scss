@@ -1,0 +1,60 @@
+//
+//	TESTIMONIAL
+//
+//
+//
+
+$testimonial-bp: phoneLrg;
+$testimonial-content-padding-sml: 0 0 $spacing-med 0;
+$testimonial-content-padding: 0 0 $spacing-lrg 0;
+$testimonial-col-spacing: $spacing-med;
+$testimonial-mobile-spacing: 0 0 $spacing-med 0;
+
+.testimonial {
+  @include clearfix;
+  padding: $testimonial-content-padding-sml;
+  margin: 0;
+
+  &:before {
+    display: none;
+  }
+}
+
+.testimonial-img {
+  margin: $testimonial-mobile-spacing;
+  text-align: center;
+
+  .user-name-avatar {
+    display: inline-block;
+
+    img {
+      border-radius: 100%;
+    }
+  }
+}
+
+@include respond-to($testimonial-bp) {
+  .testimonial {
+    padding: $testimonial-content-padding;
+  }
+
+  .testimonial-img {
+    padding: 0 $spacing-med 0 0;
+    width: 15%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .testimonial-inner {
+    display: table;
+    text-align: left;
+  }
+
+  .testimonial-content,
+  .testimonial-img {
+    display: table-cell;
+    vertical-align: top;
+  }
+}

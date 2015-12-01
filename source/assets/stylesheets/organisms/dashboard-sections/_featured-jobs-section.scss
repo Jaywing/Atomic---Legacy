@@ -1,0 +1,31 @@
+//
+// CANDIDATE DASHBOARD FEATURED JOBS SECTION
+//
+//
+$featured-jobs-section-bp: tabletLrg;
+$featured-jobs-section-bg: map_get($brandcolors, lightGrey);
+$featured-jobs-padding: $spacing-lrg $spacing-med 0 $spacing-med;
+$featured-jobs-padding-has-title: $spacing-med $spacing-med 0 $spacing-med;
+$featured-jobs-padding-has-title-dt: $spacing-med $spacing-lrg 0 $spacing-lrg;
+$featured-jobs-padding-dt: $spacing-lrg $spacing-lrg 0 $spacing-lrg;
+$featured-jobs-margin: 0 0 $spacing-lrg 0;
+
+.featured-jobs-section {
+  //padding: $featured-jobs-padding;
+  //margin: $featured-jobs-margin;
+  //background: $featured-jobs-section-bg;
+
+  &.has-title {
+    padding: $featured-jobs-padding-has-title;
+  }
+}
+
+@include respond-to($featured-jobs-section-bp) {
+  .featured-jobs-section {
+    padding: $featured-jobs-padding-dt;
+
+    &.has-title {
+      padding: $featured-jobs-padding-has-title-dt;
+    }
+  }
+}

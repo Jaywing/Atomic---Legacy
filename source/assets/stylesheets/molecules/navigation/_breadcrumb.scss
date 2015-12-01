@@ -1,0 +1,78 @@
+//
+//  BREADCRUMB
+//
+//
+//
+
+
+$breadcrumb-bp: tabletLrg;
+$breadcrumb-padding: 1.33rem 0.725rem;
+$breadcrumb-font-size: $paragraph-font-size;
+$breadcrumb-icon-font-size: 0.5rem;
+$breadcrumb-font-weight: $font-weight-normal;
+$breadcrumb-icon-color: map_get($brandcolors, lightBlack);
+$breadcrumb-icon-padding: 0 0.333rem;
+$breadcrumb-link-padding: 0;
+$breadcrumb-icon-home-font-size: 1rem;
+
+.breadcrumbs {
+  @extend %container;
+}
+
+@include respond-to($breadcrumb-bp) {
+  .breadcrumbs {
+    padding: $breadcrumb-padding;
+    @include clearfix;
+    @extend .h-no-list-styles;
+
+    li, i {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    li {
+      font-size: $breadcrumb-font-size;
+      &:first-child {
+        span {
+          @extend %visuallyhidden;
+        }
+        // Hide text 'Home'
+        .icon-home {
+          position: relative;
+          top: -3px;
+          font-size: $breadcrumb-icon-home-font-size;
+        }
+      }
+      &:last-child {
+        padding: $breadcrumb-link-padding;
+      }
+      // last item is not a link so add the padding
+      a {
+        display: inline-block;
+        padding: $breadcrumb-link-padding;
+        font-weight: $breadcrumb-font-weight;
+      }
+
+    }
+
+    .icon-breadcrumb {
+      font-size: $breadcrumb-icon-font-size;
+      padding: $breadcrumb-icon-padding;
+      margin-top: -2px;
+    }
+
+    a > i {
+      color: $anchor-font-color;
+      padding: 0;
+
+      &:hover {
+        color: $anchor-font-color-hover;
+      }
+    }
+
+    li {
+      float: left;
+      font-weight: $breadcrumb-font-weight;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+//
+// CONTACT LIST
+//
+//
+$contact-list-item-bp: tabletLrg; //Same as meta-list bp
+$contact-list-padding: 0;
+$contact-list-margin: 0 0 $spacing-lrg 0;
+
+.contact-list-section {
+  padding: $contact-list-padding;
+  margin: $contact-list-margin;
+
+  .meta-list {
+    li {
+      span {
+        color: map_get($brandcolors, black);
+      }
+      padding: 0 0 $spacing-med 0;
+    }
+  }
+}

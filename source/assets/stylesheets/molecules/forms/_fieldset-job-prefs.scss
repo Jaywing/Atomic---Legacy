@@ -1,0 +1,22 @@
+//
+// FIELDSET - JOB PREFS
+//
+//
+$fieldset-job-prefs-bp: tabletLrg;
+$fieldset-job-prefs-padding: $spacing-sml $spacing-med 0 $spacing-med;
+$fieldset-job-prefs-padding-dt: $spacing-med $spacing-lrg 0 $spacing-lrg;
+
+.job-prefs {
+  background: map_get($brandcolors, lightGrey);
+  padding: $fieldset-job-prefs-padding !important;
+  //border-top: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+  //border-bottom: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+  margin-left: -$spacing-med;
+  margin-right: -$spacing-med;
+
+  @include respond-to($fieldset-job-prefs-bp) {
+    padding: $fieldset-job-prefs-padding-dt !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

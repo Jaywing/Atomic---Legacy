@@ -1,0 +1,40 @@
+//
+//	BRAND POSITIONING SECTION
+//
+//  
+//
+
+$brand-pos-section-bp: tabletLrg;
+$brand-pos-section-max-width: 1280px;
+$brand-pos-section-padding: $spacing-med 0;
+$brand-pos-section-padding-dt: $spacing-med 0 $spacing-lrg;
+$brand-pos-section-dt-padding: ($spacing-lrg * 3) 0 $spacing-lrg;
+$brand-pos-section-bg: map_get($brandcolors, lightGrey);
+$brand-pos-container-padding-dt: 0; 
+
+
+.brand-positioning-section {
+  
+  background: $brand-pos-section-bg;
+  padding: $brand-pos-section-padding;
+
+  .l-container {
+    @extend %container;
+    width:95%;
+    padding-bottom: $spacing-med;
+    @include respond-to(desktopSml) {
+	    width: 100%;
+	  }
+  }
+
+  @include respond-to($brand-pos-section-bp) {
+    padding: $brand-pos-section-dt-padding;
+    h1 {
+    	padding: 0 15%;
+    }
+    p {
+      font-size: 1.19rem;
+    	padding: 0 5%;
+    }
+  }
+}

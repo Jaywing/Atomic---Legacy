@@ -1,0 +1,111 @@
+//
+//  PAGINATION
+//
+//
+//
+
+$pagination-padding-vert: $spacing-med;
+$pagination-padding-hori: $spacing-med;
+$pagination-padding: 0 $pagination-padding-hori $pagination-padding-vert;
+$pagination-btn-padding-sml: rem(6) rem(12);
+$pagination-btn-padding-lrg: 0.57rem $spacing-med;
+$pagination-btn-spacing: $spacing-sml;
+$pagination-btn-bg: map_get($colors, blue);
+$pagination-btn-txt: map_get($colors, white);
+$pagination-current-btn-bg: map_get($colors, grey);
+$pagination-btn-hover-bg: $pagination-current-btn-bg;
+$pagination-dropdown-width: rem(55);
+$pagination-dropdown-width-lrg: rem(201);
+
+.pagination-wrap {
+  @include clearfix();
+  position: relative;
+  text-align: center;
+  padding: $pagination-padding
+}
+
+.pagination {
+  @include clearfix;
+  @extend .h-no-list-styles;
+  display: inline-block;
+  margin-bottom: $spacing-sml;
+
+  li {
+    float: left;
+    vertical-align: middle;
+    
+    a {
+      display: block;
+      padding: $pagination-btn-padding-sml;
+      font-size: 1.5rem;
+    }
+
+    &.active {
+      a {
+        color: map-get($brandcolors, lightBlack);
+      }
+    }
+    &.disabled {
+      a {
+        cursor: map-get($cursors, disabled);
+        color: map-get($brandcolors, grey);
+      }
+    }
+    &.PagedList-skipToPrevious, &.PagedList-skipToNext {
+      position: relative;
+      bottom: -2px;
+
+      a {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.pagination-results-pp {
+  display: inline-block;
+  margin-top: rem(10);
+
+  label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  select {
+    padding: 0.3rem 0 0.1rem 0.4rem;
+    display: inline-block;
+    width: 3.5rem;
+    text-align:left;
+    height: auto;
+    margin: -(rem(5)) 0 0 rem(5);
+    font-size:1rem;
+  }
+}
+
+.PagedList-ellipses {
+  display: none;
+}
+
+@include respond-to(tabletLrg) {
+
+  .pagination-results-pp {
+    position: absolute;
+    top: -(rem(4));
+    right: $pagination-padding-hori;
+    width: $pagination-dropdown-width-lrg;
+    height: auto;
+    text-align: right;
+
+    label {
+      font-size: $font-size-sml;
+    }
+  }
+
+  .pagination-wrap {
+    text-align: left;
+    margin-left: -($spacing-med);
+  }
+
+}

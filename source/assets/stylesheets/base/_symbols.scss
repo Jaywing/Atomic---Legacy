@@ -1,0 +1,28 @@
+//
+// SYMBOLS
+//
+//
+$notification-symbol-size: 2.143rem;
+$notification-symbol-icon-size: $button-font-sml;
+$notification-symbol-color: map_get($brandcolors, white);
+$notification-symbol-border-color: map_get($brandcolors, white);
+$notification-symbol-border-width: 2px;
+
+.notification-symbol {
+  width: $notification-symbol-size;
+  height: $notification-symbol-size;
+  display: table !important;
+  text-align: center;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: $notification-symbol-border-color;
+  border-width: $notification-symbol-border-width;
+
+  > i {
+    color: $notification-symbol-color;
+    display: table-cell !important;
+    vertical-align: middle;
+    font-size: $notification-symbol-icon-size;
+    margin: 0;
+  }
+}

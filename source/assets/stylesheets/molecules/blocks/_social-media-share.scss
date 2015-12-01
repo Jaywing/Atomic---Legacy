@@ -1,0 +1,46 @@
+//
+//	SOCIAL MEDIA SHARE
+//
+//
+$social-media-padding: $spacing-med;
+$social-media-bg: map_get($colors, white);
+$social-media-text: map_get($colors, black);
+
+.social-media-share {
+  @include clearfix;
+  background: $social-media-bg;
+  padding: $social-media-padding;
+  text-align: right;
+
+  .nav-social,
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .nav-social {
+    margin: 0;
+
+    li {
+      margin-left: 0.25rem;
+
+      a {
+        padding: 0.5rem;
+        border-radius: 100%;
+        background-color: map_get($brandcolors, lightGrey);
+
+        span {
+          font-size: rem(18);
+        }
+
+        &:hover, &:focus {
+          background-color: map_get($brandcolors, white);
+        }
+      }
+    }
+  }
+
+  .social-media-caption {
+    color: $social-media-text;
+  }
+}

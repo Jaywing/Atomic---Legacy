@@ -1,0 +1,175 @@
+//
+//	ALERT BOX
+//
+//
+
+
+$alert-box-padding:                 $spacing-med;
+$alert-box-margin:                  0 0 $spacing-lrg 0;
+$alert-box-icon-colour:             map_get($brandcolors, green);
+$alert-box-icon-margin:             (-$spacing-sml / 2) $spacing-sml 0 0;
+$alert-box-border:                  1px solid map-get($colors, lightGrey);
+$alert-box-error-bg:                map_get($colors, paleRed);
+$alert-box-warn-bg:                 map_get($colors, paleYellow);
+$alert-box-ok-bg:                   map_get($brandcolors, green);
+$alert-box-ok-txt-color:            map_get($brandcolors, white);
+$alert-box-neutral-bg:              map_get($brandcolors, black);
+$alert-box-neutral-txt-color:       map_get($brandcolors, white);
+$alert-box-icon-margin:             (-$spacing-sml / 3) $spacing-sml 0 0;
+$alert-box-error-link-color:        map-get($colors, red);
+$alert-box-error-link-hover-color:  darken($alert-box-error-link-color, 20%);
+$alert-box-close-colors: rgba(255,255,255, 0.5);
+$alert-box-close-colors-hover: rgba(255,255,255, 1);
+$alert-box-job-icon-color: map_get($brandcolors, white);
+
+
+.alert-box {
+  position: relative;
+  padding:  $alert-box-padding;
+  margin:   $alert-box-margin;
+  border:   $alert-box-border;
+  //max-height:150px;
+
+  h3, i {
+    display:        inline-block;
+    vertical-align: middle;
+  }
+
+  h3 {
+    @extend %h2;
+    margin-bottom: $spacing-med;
+
+    i {
+      margin: $alert-box-icon-margin;
+      color: $alert-box-icon-colour;
+    }
+  }
+
+  p {
+    i {
+      margin: $alert-box-icon-margin;
+    }
+  }
+
+  p:last-child,
+  p:last-of-type {
+    margin: 0;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  .alert-box-close {
+    position: absolute;
+    padding: 0;
+    background: none;
+    top: $spacing-med;
+    right: $spacing-med;
+
+    i {
+      color: $alert-box-close-colors;
+      margin: 0;
+      @include transition(all $button-transition-fade-time $button-transition-fade-timing-function);
+    }
+
+    &:hover, &:focus {
+      i { color: $alert-box-close-colors-hover; }
+    }
+    span { @extend %visuallyhidden; }
+  }
+
+  &.alert-box-error {
+    background: $alert-box-error-bg;
+    border: 2px solid red;
+
+    .alert-box-close {
+      i { color: $alert-box-close-colors; }
+      &:hover, &:focus {
+        i { color: $alert-box-close-colors-hover; }
+      }
+    }
+    a {
+      color: $alert-box-error-link-color;
+      &:hover, &:focus {
+        color: $alert-box-error-link-hover-color;
+      }
+    }
+  }
+
+  &.alert-box-warn {
+    background: $alert-box-warn-bg;
+  }
+
+  &.alert-box-ok {
+    background: $alert-box-ok-bg;
+    color: $alert-box-ok-txt-color;
+
+    i {
+      color: #fff;
+    }
+
+    a {
+      color: $alert-box-ok-txt-color;
+      text-decoration: underline;
+    }
+  }
+
+  &.alert-box-neutral {
+    background: $alert-box-neutral-bg;
+    color: $alert-box-neutral-txt-color;
+    a:hover, &:focus {
+      color: map-get($brandcolors, white);
+    }
+  }
+
+  &.alert-box-summary {
+
+    p {
+      padding-right: ($spacing-lrg * 2.5);
+    }
+
+    .notification-symbol {
+      @extend %vertically-centered;
+      right: ($spacing-lrg * 1.5);
+    }
+  }
+
+  &.alert-box-job,
+  &.alert-box-summary {
+    .alert-box-close {
+      @extend %vertically-centered;
+    }
+    i.icon-bell {
+      color: $alert-box-job-icon-color;
+    }
+  }
+
+  &.alert-box-form {
+    &.alert-box-ok {
+      background: transparent;
+      padding: 0;
+      color: $site-text-color;
+
+      i {
+        display: none;
+      }
+    }
+
+    &.alert-box-error {
+      i {
+        display: none;
+      }
+    }
+  }
+
+  &.is-hidden {
+    @include transition(all 0.25s linear);
+    overflow: hidden;
+    height: 0;
+    max-height: 0;
+    padding:0;
+    margin:0;
+    border: 0;
+  }
+}

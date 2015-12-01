@@ -1,0 +1,20 @@
+//
+//	BREADCRUMBS SECTION
+//
+//  
+//
+
+$breadcrumb-section-bp: $breadcrumb-bp;
+$breadcrumb-section-bg: map_get($brandcolors, lightGrey);
+$breadcrumb-section-padding: 0;
+
+.breadcrumb-section {
+  background: $breadcrumb-section-bg;
+  display: none;
+
+  @include respond-to($breadcrumb-section-bp) {
+    display: block;
+    padding: $breadcrumb-section-padding;
+  }
+
+}

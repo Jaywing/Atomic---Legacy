@@ -1,0 +1,160 @@
+//
+//	USER STATUS
+//
+//  
+//
+
+$user-status-bp:                  tabletLrg;
+$user-status-width:               3.1rem;
+$user-status-height:              3.1rem;
+$user-status-padding:             $spacing-med;
+$user-status-padding-dt:          0.6rem $spacing-med;
+$user-status-bg:                  transparent;
+$user-status-avatar-margin:       -0.25rem 0.25rem -0.4rem 0;
+$user-status-avatar-border:       0;
+$user-status-border-radius:       100%;
+$user-status-notification-color:  map-get($brandcolors, khaki);
+$user-status-icon-size:           2rem;
+
+.user-status {
+  display:  inline-block;
+  position: relative;
+  background: $user-status-bg;
+  .icon-user-boxed {
+    font-size: $user-status-icon-size;
+    @include transition(all 0.25s linear);
+  }
+  .notification {
+    color:        $user-status-notification-color;
+    position:     absolute;
+    top:          3px;
+    right:        6px;
+    text-shadow:  1px 1px 1px rgba(0,0,0,0.7);
+    display:      none;
+  }
+  &.has-notifications {
+    .notification {
+      display: inline-block;
+    }
+  }
+  &.is-logged-in {
+    display: none;
+    background: map-get($brandcolors, black);
+  }
+  .is-logged-in & {
+    &.is-logged-in {
+      display: block;
+    }
+    &.is-logged-out {
+      display: none;
+    }
+  }
+  .user-status-avatar {
+    display: none;
+  }
+  &.has-profile-pic {
+    .user-status-avatar {
+      display: inline-block;
+    }
+    .icon-user-boxed {
+      display: none;
+    }
+  }
+}
+
+.user-status-inner {
+  padding:    $user-status-padding;
+  width:      $user-status-width;
+  height:     $user-status-height;
+  .user-status.is-logged-in.has-profile-pic & {
+    padding:  0;
+    text-align: center;
+  }
+}
+
+.user-status-text {
+  @include transition(all 0.25s linear);
+  position: absolute;
+  top: -9999px;
+}
+
+.user-status-avatar {
+  display: inline-block;
+  max-width: $user-status-width;
+  max-height: $user-status-height;
+  position: relative;
+  top:6px;
+  left:6px;
+  img {
+    @include transition(all 0.25s linear);
+    border-radius: $user-status-border-radius;
+    border: 2px solid transparent;
+  }
+}
+
+.user-status.is-logged-in {
+  a:hover, &:focus {
+    .user-status-avatar {
+      img {
+        border-color: map-get($brandcolors, darkGreen);
+      }
+    }
+    .icon-user-boxed {
+      color: map-get($brandcolors, khaki);
+    }
+    .user-status-text {
+      color: map-get($brandcolors, white);
+    }
+  }
+}
+
+@include respond-to($user-status-bp) {
+  .user-status-text {
+    position: relative;
+    padding: rem(18) rem(12) 0;
+    line-height:1.2;
+    float:left;
+    display:block;
+    text-align: left;
+    top: -0.7rem;
+    u {
+      display: inline-block;
+      color: map-get($brandcolors, white);
+      text-decoration: none;
+      font-size:0.9rem;
+    }
+  }
+  .user-status-inner {
+    width: auto;
+    height: auto;
+    padding: $user-status-padding-dt;
+    .is-logged-in & {
+      padding: $user-status-padding-dt;
+      .user-status-text {
+        padding-top: rem(8);
+      }
+    }
+  }
+  
+  .user-status-avatar {
+    margin: $user-status-avatar-margin;
+    float:left;
+  }
+  .icon-user-boxed {
+    float: left;
+  }
+  .user-status {
+    .notification {
+      top:  rem(8);
+      right: rem(18);
+    }
+    &.has-profile-pic {
+      .user-status-text {
+        padding: rem(18) rem(12) 0;
+      }
+      .notification {
+        //left:2.75rem;
+      }
+    }
+  }
+}

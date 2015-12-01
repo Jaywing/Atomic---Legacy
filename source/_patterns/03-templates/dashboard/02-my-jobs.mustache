@@ -1,0 +1,41 @@
+<div class="page is-logged-in" id="page">
+
+    {{> organisms-header-logged-in }}
+
+    <main id="content" role="main" class="main">
+
+        {{> organisms-breadcrumb-section }}
+
+        {{> molecules-user-name }}
+
+        <div class="col-wrap candidate-dashboard-wrap">
+
+            <div class="col-sub col">
+                <div class="col-inner col-sub-inner">
+                    {{> molecules-sidebar-nav-dashboard-jobs }}
+                </div>
+            </div>
+
+            <div class="col-main col">
+
+                <div class="col-inner col-main-inner">
+
+                    {{> organisms-featured-jobs-section }}
+
+                    {{> organisms-latest-job-applications-section }}
+
+                    {{> organisms-latest-saved-jobs }}
+
+                    {{> molecules-job-search }}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    {{> organisms-footer }}
+
+</div>

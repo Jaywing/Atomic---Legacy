@@ -1,0 +1,15 @@
+//
+//  UPLOAD DOCUMENT FORM
+//
+//
+
+$form-upload-doc-bp: tabletLrg;
+$form-upload-doc-field-rules-padding: 1.2rem 0 0 0;
+
+@include respond-to(tabletLrg) {
+  .form-upload-document {
+    .field > p {
+      padding: $form-upload-doc-field-rules-padding;
+    }
+  }
+}

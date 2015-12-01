@@ -1,0 +1,96 @@
+//
+//	COLLAPSIBLE TABS
+//
+//
+//
+
+
+$collapsible-tabs-bp: tabletLrg;
+
+
+.collapsible-tabs {
+  display: block;
+  padding: $spacing-med 0;
+}
+
+.collapsible-tabs-responsive {
+  display: none;
+  .collapsible-tabs-content-item {
+    .form-inline {
+      margin:0;
+      background: map-get($brandcolors, lightGrey);
+      h2 {
+        @extend %visuallyhidden;
+      }
+    }
+  }
+  .collapsible-tabs-content-destination {
+    .collapsible-tabs-content-item {
+      &.is-active {
+        border-top: rem(8) solid map-get($brandcolors, green);
+      }
+    }
+  }
+}
+
+.collapsible-tabs-content {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  .collapsible-tabs-content-item {
+    background: map-get($brandcolors, lightGrey);
+    border-bottom: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+    &:first-child {
+      border-top: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+    }
+    &:last-child {
+      margin-bottom: $spacing-med;
+    }
+    .form-inline {
+      margin:0;
+      padding-top: $spacing-sml;
+      padding-bottom: rem(3);
+      padding-left: $spacing-med;
+      padding-right: $spacing-med;
+    }
+  }
+}
+
+.collapsible-tabs-content-destination {
+  //margin-right:1px;
+  .form-inline {
+    padding-left: $spacing-med;
+    padding-right: $spacing-med;
+    fieldset {
+      margin-bottom: 0;
+    }
+  }
+  .collapsible-tabs-content-item {
+    @include transition(max-height .25s linear);
+    max-height: 0;
+    height: auto;
+    overflow: hidden;
+    &.is-active {
+      max-height: 640px;
+    }
+    > :first-child {
+      padding-top: $spacing-lrg;
+    }
+  }
+}
+
+@include respond-to($collapsible-tabs-bp) {
+
+  .collapsible-tabs-responsive {
+    display: block;
+    margin: 0 0 $spacing-med;
+    .tab-controls {
+      background: map-get($brandcolors, white);
+      border: 0;
+    }
+  }
+
+  .collapsible-tabs-content {
+    display: none;
+  }
+
+}

@@ -1,0 +1,60 @@
+//
+//	TAB CONTROLS
+//
+//  
+//
+
+
+.tab-controls {
+  display: table;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: map-get($brandcolors, black);
+  border-bottom: rem(8) solid map-get($brandcolors, green);
+  li {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 2px;
+    &:last-child {
+      padding: 0;
+    }
+    .button {
+      margin-bottom: 0;
+      background: map-get($brandcolors, grey);
+      border-radius: 0;
+      font-size: 1.125rem;
+      font-family: $primary-font;
+      padding: 1rem 0.5rem;
+      &:hover, &:focus {
+        background: darken(map-get($brandcolors, grey), 10%);
+      }
+    }
+    &.is-active {
+      .button {
+        background: map-get($brandcolors, green);
+      }
+    }
+  }
+  &.tabs-2 {
+    li {
+      width:50%;
+    }
+  }
+  &.tabs-3 {
+    li {
+      width:33.333%;
+    }
+  }
+  &.tabs-4 {
+    li {
+      width:25%;
+    }
+  }
+  &.tabs-5 {
+    li {
+      width:20%;
+    }
+  }
+}

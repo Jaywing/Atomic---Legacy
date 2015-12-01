@@ -1,0 +1,28 @@
+//
+//	SITE
+//
+//	Global settings
+//
+
+$site-bg-color: map-get($brandcolors, white);
+$site-text-color: map-get($brandcolors, black);
+$site-font: $primary-font;
+
+html {
+  @include font-size($base-font-sizes); // implements responsive base font size
+}
+
+body {
+  font-family: $site-font;
+  background: $site-bg-color;
+  color: $site-text-color;
+  line-height: $base-line-height;
+}
+
+article {
+  p {
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

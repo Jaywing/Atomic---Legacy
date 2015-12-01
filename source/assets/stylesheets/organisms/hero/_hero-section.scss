@@ -1,0 +1,191 @@
+//
+//	HERO SECTION
+//
+//  
+//
+
+$hero-section-bp: tabletLrg;
+$hero-section-padding: 0 rem(12);
+$hero-image-max-height: 550px;
+$hero-image-max-height-med: 600px;
+$hero-image-max-height-lrg: 700px;
+$hero-inner-max-width: 90%;
+$hero-inner-max-width-sml: 1024px;
+$hero-inner-max-width-lrg: 1280px;
+$hero-inner-top-pos: -55%;
+$hero-job-search-advanced-active-bg: rgba(100, 198, 185, 0.9);
+$hero-job-search-advanced-bg: rgba(100, 198, 185, 0.9);
+$hero-job-search-txt-color: map-get($brandcolors, white);
+$hero-job-search-open-bg: map-get($colors, white);
+$hero-job-search-transition: all 0.25s linear;
+$hero-brand-pos-color: map-get($brandcolors, black);
+$hero-key-ctas-bg: map-get($colors, white);
+$hero-key-ctas-top-pos: 50%;
+
+.hero-section {
+  padding: $hero-section-padding;
+  .hero-image {
+    margin-left: -(rem(12));
+    margin-right: -(rem(12));
+    max-height: 20rem;
+    overflow: hidden;
+  }
+  &.hero-section-brand {
+    padding-bottom: $spacing-lrg;
+    .hero-image {
+      margin-bottom: $spacing-med;
+    }
+    .l-container {
+      @extend %container;
+      text-align: left;
+      padding: 0 1rem;
+    }
+  }
+}
+
+@include respond-to($hero-section-bp) {
+
+  .hero-section {
+
+    padding:0;
+    position: relative;
+
+    .hero-image {
+      max-height: $hero-image-max-height;
+      margin: 0;
+      img {
+        width: 100%;
+        max-width: auto;
+      }
+    }
+
+    .job-search, .key-ctas, .brand-positioning {
+      position: absolute;
+      left: 50%;
+    }
+
+    .brand-positioning {
+      @include transform(translateX(-50%) translateY($hero-inner-top-pos));
+      top: 68%;
+    }
+
+    .job-search {
+      @include transform(translateX(-50%));
+      bottom: 5.6667rem;
+      background: $hero-job-search-advanced-bg;
+      color: $hero-job-search-txt-color;
+      margin: 0;
+      
+      h2 {
+        @extend %h2;
+        font-size: 1.7rem;
+        margin-bottom: 0.474rem;
+      }
+
+      &.is-adv-active {
+        background: $hero-job-search-advanced-active-bg;
+      }
+      &.job-search-editor {
+        background: rgba(255,255,255,0.5);
+        min-height: 140px;
+      }
+    }
+
+    .brand-positioning {
+      h1, p {
+        color: $hero-brand-pos-color;
+        font-family: $primary-font;
+      }
+      h1 {
+        @extend %h2;
+        margin-bottom: 0.725rem;
+      }
+      p {
+        font-size:1.125rem;
+      }
+    }
+
+    .key-ctas {
+      @include transform(translateX(-50%) translateY($hero-key-ctas-top-pos));
+      bottom: 0;
+    }
+
+    &.hero-section-brand {
+      position:relative;
+      padding-bottom: 0;
+      .hero-image {
+        width:100%;
+        z-index: 0;
+        margin:0;
+      }
+      .l-container {
+        display: table;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translateX(-50%) translateY(-50%));
+        z-index: 3;
+        padding:0;
+        &:after {
+          content:'';
+        }
+        .brand-positioning, &:after {
+          display: table-cell;
+          text-align: left;
+          position: relative;
+          @include transform(translateY(0) translateX(0));
+          width:50%;
+          left: 0;
+          margin: 0;
+          padding: $spacing-med;
+          vertical-align: middle;
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        background: rgba(255,255,255,0.85);
+        z-index: 1;
+      }
+    }
+
+  }
+
+}
+
+@include respond-to(desktopSml) {
+  .hero-section.hero-section-brand {
+    .l-container {
+      .brand-positioning {
+        padding-left:0;
+      }
+    }
+  }
+  .hero-section {
+    .l-container {
+      .job-search, .key-ctas {
+        width:81%;
+      }
+    }
+  }
+}
+
+@include respond-to(wideScrSml) {
+  .hero-section {
+    .hero-image {
+      max-height: $hero-image-max-height-med;
+    }
+  }
+}
+
+@include respond-to(wideScrLrg) {
+  .hero-section {
+    .hero-image {
+      max-height: $hero-image-max-height-lrg;
+    }
+  }
+}

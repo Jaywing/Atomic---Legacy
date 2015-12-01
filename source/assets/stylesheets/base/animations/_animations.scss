@@ -1,0 +1,17 @@
+//
+//	ANIMATIONS
+//
+//
+//
+
+.is-changed {
+  @include animation(changeFade $change-fade-duration linear);
+}
+
+.is-hidden {
+  @extend .flipOutX;
+}
+
+.is-saved-changed {
+  @extend .pulse;
+}

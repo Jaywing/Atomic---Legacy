@@ -1,0 +1,60 @@
+<div class="page is-logged-in" id="page">
+
+	{{> organisms-header-logged-in }}
+
+	<main id="content" role="main" class="main">
+
+		{{> organisms-breadcrumb-section }}
+
+		<div class="col-wrap col-wrap-opp">
+
+			<div class="col-main col">
+
+                <div class="col-inner col-main-inner">
+
+                    {{> molecules-job-title }}
+
+                    {{> molecules-job-details-meta }}
+
+                    <div class="back-to-search-wrap">
+                        {{> molecules-back-to-search-results }}
+                    </div>
+
+                    {{> molecules-collapsible-tabs-header-controls }}
+
+                    <article>
+                        {{> molecules-generic-content }}
+                    </article>
+
+                    {{> molecules-collapsible-tabs-content }}
+
+                    {{> molecules-back-to-search-results }}
+
+                    {{> molecules-social-media-share }}
+
+                    {{> molecules-related-mini-bio-consultant }}
+
+                </div>
+
+			</div>
+			<!-- End .job-detail-section -->
+
+			<div class="col-sub col">
+
+                <div class="col-inner col-sub-inner">
+
+                    {{> molecules-job-search-vertical }}
+
+                </div>
+
+			</div>
+
+		</div>
+
+		{{> organisms-related-content-section-jobs }}
+
+	</main>
+
+	{{> organisms-footer }}
+
+</div>

@@ -1,0 +1,119 @@
+//
+//	TABLE
+//
+//	
+//
+
+// These control the background color for the table and even rows
+$table-bg: map-get($colors, white);
+$table-even-row-bg: darken($table-bg, 15%);
+
+// These control the table cell border style
+$table-border-style: solid;
+$table-border-size: 1px;
+$table-border-color: lighten(map-get($colors, grey), 15%);
+
+// These control the table head styles
+$table-head-bg: darken($table-bg, 25%);
+$table-head-font-size: 1rem;
+$table-head-font-color: inhret;
+$table-head-font-weight: $font-weight-bold;
+$table-head-padding: rem(8) rem(10) rem(10);
+
+// These control the table foot styles
+$table-foot-bg: $table-head-bg;
+$table-foot-font-size: $table-head-font-size;
+$table-foot-font-color: $table-head-font-color;
+$table-foot-font-weight: $table-head-font-weight;
+$table-foot-padding: $table-head-padding;
+
+// These control the caption
+$table-caption-bg: transparent;
+$table-caption-font-color: $table-head-font-color;
+$table-caption-font-size: rem(18);
+$table-caption-font-weight: $font-weight-bold;
+
+// These control the row padding and font styles
+$table-row-padding: rem(9) rem(10);
+$table-row-font-size: 1rem;
+$table-row-font-color: inherit;
+$table-line-height: $base-line-height;
+
+// These are for controlling the layout, display and margin of tables
+$table-layout: auto;
+$table-display: table-cell;
+$table-margin: 0 0 $vertical-rhythm 0;
+
+table {
+  background: $table-bg;
+  border: $table-border-style $table-border-size $table-border-color;
+  margin: $table-margin;
+  table-layout: $table-layout;
+
+  caption {
+    background: $table-caption-bg;
+    color: $table-caption-font-color;
+    font: {
+      size: $table-caption-font-size;
+      weight: $table-caption-font-weight;
+    }
+  }
+
+  thead {
+    background: $table-head-bg;
+
+    tr {
+      th, td {
+        color: $table-head-font-color;
+        font-size: $table-head-font-size;
+        font-weight: $table-head-font-weight;
+        padding: $table-head-padding;
+      }
+    }
+  }
+
+  tfoot {
+    background: $table-foot-bg;
+
+    tr {
+      th, td {
+        color: $table-foot-font-color;
+        font-size: $table-foot-font-size;
+        font-weight: $table-foot-font-weight;
+        padding: $table-foot-padding;
+      }
+    }
+  }
+
+  tr {
+    th, td {
+      color: $table-row-font-color;
+      font-size: $table-row-font-size;
+      padding: $table-row-padding;
+      text-align: left;
+    }
+
+    &.even, &.alt, &:nth-of-type(even) {
+      background: $table-even-row-bg;
+    }
+  }
+
+  thead tr th, tfoot tr th, tfoot tr td, tbody tr th, tbody tr td, tr td {
+    display: $table-display;
+    line-height: $table-line-height;
+  }
+
+}
+
+.table-no-styles {
+  border: 0;
+  thead, tfoot {
+    background: none;
+  }
+  tr {
+    background: none;
+    &.even, &.alt, &:nth-of-type(even) {
+      background: none;
+    }
+  }
+}

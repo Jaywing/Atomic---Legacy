@@ -1,0 +1,58 @@
+//
+// CHECKBOXES
+//
+//
+$checkbox-square-color: rgb(255, 255, 255);
+$checkbox-tick-color: rgb(68, 68, 68);
+$checkbox-label-padding: 0 0 0 1.5rem;
+
+.checkbox-label {
+  position: relative;
+  padding: $checkbox-label-padding;
+}
+
+input[type="checkbox"] {
+  display: none;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+
+  ~ span {
+    &:before,
+    &:after {
+      visibility: visible;
+      font-family: $icon-font;
+      @extend %vertically-centered;
+      top: 0.7rem; //Equal to label top margin / padding
+      left: 0;
+      line-height: 1;
+    }
+
+    &:before {
+      content: "\e807";
+      color: rgb(255, 255, 255);
+      border: 1px solid #c4c4c4;
+    }
+    &:after {
+      content: "";
+      border: 0;
+    }
+  }
+
+  &:checked {
+    ~ span {
+      &:before {
+        content: "\e808";
+        color: $checkbox-square-color;
+      }
+      &:after {
+        content: "\e809";
+        color: $checkbox-tick-color;
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

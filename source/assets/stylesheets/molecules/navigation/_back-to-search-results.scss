@@ -1,0 +1,32 @@
+//
+//	BACK TO RESULTS
+//
+//
+//
+
+//$back-to-search-bp:	tabletLrg;
+
+$back-to-search-padding: $spacing-med 0;
+$back-to-search-bg: none;
+$back-to-search-margin: 0 0 $spacing-med;
+$back-to-search-txt-size: 1rem;
+
+.back-to-results {
+  .button, button {
+    margin-bottom: 0;
+  }
+}
+
+.back-to-results-inner {
+  @include clearfix;
+  padding: $back-to-search-padding;
+
+  .back-to-results-link {
+    float: left;
+  }
+
+  .back-to-results-apply {
+    float: right;
+    margin: 0;
+  }
+}

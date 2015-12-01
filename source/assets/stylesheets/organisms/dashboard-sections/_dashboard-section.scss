@@ -1,0 +1,61 @@
+//
+//  DASHBOARD SECTION
+//
+//
+$dashboard-section-bp: desktopSml;
+$dashboard-section-padding: $spacing-med $spacing-med 0 $spacing-med;
+$dashboard-section-padding-dt: $spacing-med $spacing-lrg 0 $spacing-lrg;
+$dashboard-section-margin: 0 (-$spacing-med) $spacing-lrg (-$spacing-med);
+$dashboard-section-margin-dt: 0 (-$spacing-lrg) $spacing-lrg (-$spacing-lrg);
+$dashboard-section-bg: map_get($brandcolors, lightGrey);
+$cta-section-padding: $spacing-lrg 0;
+$collapsible-bg-color: map_get($brandcolors, white);
+$collapsible-padding: $spacing-lrg;
+$collapsible-margin: 0 0 $spacing-lrg 0;
+
+
+.job-list,
+.search-list {
+  @extend .h-no-list-styles;
+}
+
+.col-main {
+  .candidate-dashboard-section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.candidate-dashboard-section {
+  overflow: hidden;
+  background: $dashboard-section-bg;
+  padding: $dashboard-section-padding;
+  margin: $dashboard-section-margin;
+
+  .cta-section {
+    padding: $cta-section-padding;
+  }
+  .collapsible {
+    background: $collapsible-bg-color;
+    padding: $spacing-med;
+    margin: $collapsible-margin;
+
+    &.is-active {
+      padding: $spacing-med;
+    }
+  }
+
+  @include respond-to($dashboard-section-bp) {
+    padding: $dashboard-section-padding-dt;
+    margin: $dashboard-section-margin-dt;
+
+  }
+}
+
+.form-my-profile {
+  .form-controls {
+    button {
+      margin-bottom: $spacing-med;
+    }
+  }
+}

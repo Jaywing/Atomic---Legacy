@@ -1,0 +1,30 @@
+//
+// MY NOTIFICATIONS
+//
+//
+
+$my-notifications-bp: desktopSml;
+$my-notifications-alert-spacing: 0 0 $spacing-med 0;
+$my-notifications-padding: $spacing-med;
+$my-notifications-padding-dt: $spacing-med $spacing-lrg $spacing-lrg $spacing-lrg;
+
+.candidate-dashboard-section
+{
+  &.my-notifications {
+    padding: $my-notifications-padding;
+
+    &.candidate-dashboard-section {
+      .alert-box {
+        margin: $my-notifications-alert-spacing;
+      }
+    }
+
+    .cta-section {
+      padding-bottom: 0;
+    }
+
+    @include respond-to($my-notifications-bp) {
+      padding: $my-notifications-padding-dt;
+    }
+  }
+}

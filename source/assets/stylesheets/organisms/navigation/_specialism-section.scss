@@ -1,0 +1,20 @@
+//
+//	SPECIALISM SECTION
+//
+//  
+//
+
+$specialism-bp: tabletLrg;
+$specialism-section-align: center;
+$specialism-section-container-padding: $spacing-med rem(12);
+$specialism-section-container-padding-dt: $spacing-lrg 0;
+
+.specialism-section {
+  @extend %container;
+  padding: $specialism-section-container-padding;
+  text-align: $specialism-section-align;
+
+  @include respond-to(tabletLrg) {
+    padding: $specialism-section-container-padding-dt;
+  }
+}

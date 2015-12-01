@@ -1,0 +1,23 @@
+//
+//	BG FADE
+//
+//	
+//
+
+// is-changed
+
+$change-fade-color: rgba(map-get($colors, paleYellow), 1);
+$change-fade-duration: .75s;
+
+@include keyframes(changeFade) {
+  from {
+    background: $change-fade-color;
+  }
+  to {
+    background: rgba($change-fade-color, 0);
+  }
+}
+
+.is-changed {
+  @include animation(changeFade $change-fade-duration linear);
+}

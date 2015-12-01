@@ -1,0 +1,20 @@
+//
+//	CANDIDATE TEMPLATE
+//
+//
+//
+$cand-bp: desktopSml;
+$cand-dash-bg: map-get($colors, white);
+$cand-dash-main-bg: map-get($colors, white);
+
+.candidate-dashboard-wrap {
+  background: $cand-dash-bg;
+
+  .col-main {
+    background: $cand-dash-main-bg;
+  }
+
+  @include respond-to($cand-bp) {
+    @extend .l-container;
+  }
+}

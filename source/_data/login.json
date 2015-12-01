@@ -1,0 +1,9 @@
+{
+  "status" : "success",
+  "user" : {
+    "firstName" : "Geoffrey",
+    "lastName" : "Plantagenet",
+    "profilePic" : "../../assets/images/sample/user-avatar-sample.jpg",
+    "hasNotifications" : true
+  }
+}

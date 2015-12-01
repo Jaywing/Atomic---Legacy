@@ -1,0 +1,49 @@
+<div class="page is-logged-in" id="page">
+
+    {{> organisms-header-logged-in }}
+
+    <main role="main" class="main">
+
+        {{> organisms-breadcrumb-section }}
+
+        <div class="col-wrap consultant-profile-wrap">
+
+            <div class="col-sub col">
+                <div class="col-inner col-sub-inner">
+                    {{> molecules-sidebar-nav-consultant-profile }}
+                </div>
+            </div>
+
+            <div class="col-main col">
+
+                <div class="col-inner col-main-inner">
+
+                    <header class="consultant-heading">
+                        {{> molecules-page-title-person }}
+                    </header>
+
+                    <article>
+                        {{> molecules-generic-content }}
+                    </article>
+
+                    {{> organisms-contact-list }}
+
+                    <article>
+                        {{> molecules-generic-content }}
+                    </article>
+
+                    {{> organisms-featured-jobs-section-w-title }}
+
+                    {{> molecules-job-search }}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    {{> organisms-footer }}
+
+</div>

@@ -1,0 +1,18 @@
+//
+// SPACING HELPERS
+//
+//
+$touch-spacing-max-bp: tabletSml;
+$touch-spacing: $spacing-med;
+
+@include respond-to-max($touch-spacing-max-bp) {
+  .touch-spacing-v {
+    display: block;
+    padding: $touch-spacing 0;
+  }
+
+  .touch-spacing-h {
+    padding: 0 $touch-spacing;
+  }
+}
+

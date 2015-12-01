@@ -1,0 +1,18 @@
+<nav class="sidebar-nav-menu" role="navigation">
+    <a href="#" id="sidebar-nav-menu-toggle">You are here: <b>Find a branch</b><i class="icon-arrow-down" aria-hidden="true"></i></a>
+    <ul class="sidebar-nav-menu-section-wrap">
+        {{#sidebarNavConsultantProfile}}
+            <li class="sidebar-nav-menu-section">
+
+                <h3>{{sidebarSectionHeader}}</h3>
+
+                <ul>
+                    {{#sidebarSectionItem}}
+                        <li {{#isActive}}class="is-active"{{/isActive}}><a href="{{itemUrl}}">{{itemName}}</a></li>
+                    {{/sidebarSectionItem}}
+                </ul>
+
+            </li>
+        {{/sidebarNavConsultantProfile}}
+    </ul>
+</nav>

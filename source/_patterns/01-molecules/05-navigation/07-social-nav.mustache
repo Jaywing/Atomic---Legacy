@@ -1,0 +1,10 @@
+<ul class="nav-social">
+    {{ #social }}
+    <li>
+        <a href="{{ social-url }}" class="social-{{ social-title }}" title="{{ social-title }}">
+            <span class="icon-{{ social-icon }}" aria-hidden="true"></span>
+            <span class="nav-social-text">{{ social-title }}</span>
+        </a>
+    </li>
+    {{ /social }}
+</ul>

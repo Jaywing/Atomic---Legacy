@@ -1,0 +1,148 @@
+//
+//	LAYOUT
+//
+//  Common Layout Classes (avoid grid classes)
+//
+
+$l-section-padding: 0 0 $spacing-lrg;
+$col-wrap-border-top: none;
+$col-wrap-border-bottom: none;
+$col-main-inner-padding: 0 $spacing-med;
+$col-main-inner-padding-dt: 0 $spacing-lrg;
+$max-width: 71.111rem;
+
+%container {
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	@include respond-to(tabletLrg) {
+		width:95%;
+	}
+	@include respond-to(desktopMed) {
+		width:81%;
+	}
+}
+
+.page {
+	overflow-x: hidden;
+}
+
+main {
+	.breadcrumb-section {
+		~ .l-container {
+			@extend %container;
+			padding: $spacing-med $spacing-med 0;
+		}
+	}
+}
+
+//500 Error
+body {
+	&.error-500 {
+		.l-container {
+			@extend %container;
+			padding: $spacing-med $spacing-med 0;
+		}
+	}
+}
+
+.l-section {
+  padding: $l-section-padding;
+  clear: both;
+}
+
+.l-row {
+  @include row();
+}
+
+.col-main {
+	.col-main-inner {
+		padding: $col-main-inner-padding;
+
+		.job-search {
+			width: 100%;
+		}
+
+		.col-main-content {
+			margin-left: -$spacing-med;
+			margin-right: -$spacing-med;
+		}
+	}
+}
+
+.sign-in-wrap {
+	@include clearfix;
+}
+
+@include respond-to(tabletLrg) {
+
+	main {
+	.breadcrumb-section {
+			+ .l-container {
+				padding: 0 $spacing-med;
+			}
+		}
+	}
+
+	.content-2col {
+		@include row;
+		margin: $paragraph-margin;
+
+		.content-2col-left,
+		.content-2col-right {
+			@include cols(6,12);
+		}
+
+		.content-2col-left {
+			padding-right: $spacing-med;
+		}
+		.content-2col-right {
+			padding-left: $spacing-med;
+		}
+	}
+}
+
+@include respond-to(desktopSml) {
+
+	.col-sub {
+		@include cols(4, 12);
+	}
+
+	.col-main {
+		@include cols(8, 12);
+
+		.col-main-inner {
+			padding: $col-main-inner-padding-dt;
+
+			.col-main-content {
+				margin-left: -$spacing-lrg;
+				margin-right: -$spacing-lrg;
+			}
+		}
+	}
+
+	.col-equal {
+		@include cols(6,12);
+	}
+
+	.col-wrap {
+		@include clearfix;
+		@extend %container;
+		padding: 0;
+		max-width: $max-width;
+		margin: 0 auto $spacing-lrg;
+		border-top: $col-wrap-border-top;
+	  border-bottom: $col-wrap-border-bottom;
+	  &.col-wrap-opp {
+	  	> .col {
+	  		float: right;
+	  	}
+	  }
+		&.sign-in-wrap {
+			padding: 0;
+			width: 100%;
+		}
+	}
+
+}

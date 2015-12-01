@@ -1,0 +1,12 @@
+//
+//	TAGS SECTION
+//
+//
+$tag-section-padding: $spacing-lrg 0;
+$tag-section-bg: map_get($colors, white);
+
+.tag-section {
+  background: $tag-section-bg;
+  padding: $tag-section-padding;
+  text-align: center;
+}

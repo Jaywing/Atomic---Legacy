@@ -1,0 +1,42 @@
+//
+//	TABS
+//
+//  
+//
+
+.ui-tabs .ui-tabs-nav {
+	padding: 0;
+	&.ui-widget-header {
+		border-bottom: 8px solid map-get($brandcolors, green);
+	}
+	li {
+		border:0;
+		a {
+			background: map-get($brandcolors, grey);
+			color: map-get($brandcolors, white);
+			&:hover, &:focus {
+				background: darken(map-get($brandcolors, grey), 10%);
+			}
+		}
+		&.ui-tabs-active {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			a {
+				background: map-get($brandcolors, green);
+				color: map-get($brandcolors, white);
+			}
+		}
+	}
+}
+
+.ui-tabs {
+	margin-bottom: 1rem;
+	.ui-tabs-panel {
+			padding-left: 0;
+			padding-right: 0;
+	}
+}
+
+.ui-widget-content {
+	border: 0;
+}

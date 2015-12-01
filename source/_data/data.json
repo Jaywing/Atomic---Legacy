@@ -1,0 +1,823 @@
+{
+    "title": "Pattern Lab",
+    "htmlClass": "pl",
+    "bodyClass": "body",
+    "img": {
+        "landscape-4x3": {
+            "src": "../../assets/images/fpo_4x3.png",
+            "alt": "4x3 Image"
+        },
+        "landscape-16x9": {
+            "src": "../../assets/images/fpo_16x9.png",
+            "alt": "16x9 Image"
+        },
+        "square": {
+            "src": "../../assets/images/fpo_square.png",
+            "alt": "Square Thumbnail"
+        },
+        "avatar": {
+            "src": "../../assets/images/fpo_avatar.png",
+            "alt": "Person Name"
+        },
+        "rectangle": {
+            "src": "http://placeimg.com/400/300/tech",
+            "alt": "Rectangle"
+        }
+    },
+    "headline": {
+        "short": "Lorem ipsum dolor sit (37 characters)",
+        "medium": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
+    },
+    "excerpt": {
+        "short": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "medium": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "long": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "description": "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
+    "brand-positioning": {
+        "headline": "Brand positioning statement including specialisms and industry area",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    },
+    "latest-news": [
+        {
+            "news-headline": "News article title 1 consectetur adipisicing elit",
+            "news-date": "19/09/2015",
+            "news-summary": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "news-headline": "News article title 2 enim ad minim veniam, quis nostrud",
+            "news-date": "16/09/2015",
+            "news-summary": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "news-headline": "News article title 3",
+            "news-date": "14/09/2015",
+            "news-summary": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+    ],
+    "url": "#",
+    "name": {
+        "first": "Lacy",
+        "firsti": "L",
+        "middle": "Tommie",
+        "middlei": "T",
+        "last": "Way",
+        "lasti": "W"
+    },
+    "year": {
+        "long": "2013",
+        "short": "13"
+    },
+    "month": {
+        "long": "February",
+        "short": "Feb",
+        "digit": "02"
+    },
+    "dayofweek": {
+        "long": "Monday",
+        "short": "Mon"
+    },
+    "day": {
+        "long": "10",
+        "short": "10",
+        "ordinal": "th"
+    },
+    "hour": {
+        "long": "01",
+        "short": "1",
+        "military": "13",
+        "ampm": "pm"
+    },
+    "minute": {
+        "long": "20",
+        "short": "20"
+    },
+    "seconds": "31",
+    "author": {
+        "first-name": "Author",
+        "last-name": "Name"
+    },
+    "hero": true,
+    "emergency": true,
+    "touts": [
+        {},
+        {},
+        {}
+    ],
+    "latest-posts": [
+        {},
+        {},
+        {},
+        {},
+        {}
+    ],
+    "promo-item": {
+        "promo-url": "#",
+        "promo-title": "Promotion item title",
+        "promo-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "social": [
+        {
+            "social-title": "Twitter",
+            "social-icon": "twitter",
+            "social-class": "twitter-social",
+            "social-url": "#"
+        },
+        {
+            "social-title": "Facebook",
+            "social-icon": "facebook",
+            "social-class": "facebook-social",
+            "social-url": "#"
+        },
+        {
+            "social-title": "LinkedIn",
+            "social-icon": "linkedin",
+            "social-class": "linkedin-social",
+            "social-url": "#"
+        },
+        {
+            "social-title": "Google+",
+            "social-icon": "googleplus",
+            "social-class": "gplus-social",
+            "social-url": "#"
+        }
+    ],
+    "nav": [
+        {
+            "page-title": "Clients",
+            "page-url": "?page=clients",
+            "has-children": true,
+            "subpages": [
+                {
+                    "page-title": "Recruitment services",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Management services",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "The Tate process",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Charter & guarantee",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Advice",
+                    "page-url": "#"
+                }
+            ]
+        },
+        {
+            "page-title": "Our Approach",
+            "page-url": "?page=approach",
+            "has-children": true,
+            "subpages": [
+                {
+                    "page-title": "Tate & our people",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Our clients",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Our vision & value",
+                    "page-url": "#"
+                }
+            ]
+        },
+        {
+            "page-title": "Specialisms",
+            "page-url": "?page=specialisms",
+            "has-children": true,
+            "subpages": [
+                {
+                    "page-title": "PA jobs",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Receptionists jobs",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Administration jobs",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Customer service jobs",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "HR jobs",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Marketing jobs",
+                    "page-url": "#"
+                }
+            ]
+        },
+        {
+            "page-title": "Jobseekers",
+            "page-url": "?page=jobseekers",
+            "has-children": true,
+            "subpages": [
+                {
+                    "page-title": "CV advice",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Interview advice",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Career advice",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Pippa's advice",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Working in the UK",
+                    "page-url": "#"
+                }
+            ]
+        },
+        {
+            "page-title": "Insight",
+            "page-url": "?page=Insight",
+            "has-children": true,
+            "subpages": [
+                {
+                    "page-title": "News",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Blog",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Industry insights",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "How-to guides",
+                    "page-url": "#"
+                },
+                {
+                    "page-title": "Events & seminars",
+                    "page-url": "#"
+                }
+            ]
+        },
+        {
+            "page-title": "Contact",
+            "page-url": "?page=contact",
+            "has-children": false
+        }
+    ],
+    "tertiary-nav": [
+        {
+            "page-title": "Privacy",
+            "page-url": "#"
+        },
+        {
+            "page-title": "Accessibility",
+            "page-url": "#"
+        },
+        {
+            "page-title": "Sitemap",
+            "page-url": "#"
+        }
+    ],
+    "corporate-nav": [
+        {
+            "page-title": "Impellum",
+            "page-url": "#"
+        },
+        {
+            "page-title": "Investors",
+            "page-url": "#"
+        }
+    ],
+    "partners": [
+        {
+            "partner-title": "Partner 1",
+            "partner-logo": "../../assets/images/partner-logo-1.png",
+            "partner-url": "#"
+        },
+        {
+            "partner-title": "Partner 2",
+            "partner-logo": "../../assets/images/partner-logo-1.png",
+            "partner-url": "#"
+        },
+        {
+            "partner-title": "Partner 3",
+            "partner-logo": "../../assets/images/partner-logo-1.png",
+            "partner-url": "#"
+        }
+    ],
+    "sectors": [
+        {
+            "sector-title": "PA's",
+            "sector-value": "pas",
+            "sector-icon": "meter",
+            "sub-sectors": [
+                {
+                    "sector-title": "Sub Sector 1-1",
+                    "sector-value": "subsector1-1"
+                },
+                {
+                    "sector-title": "Sub Sector 1-2",
+                    "sector-value": "subsector1-2"
+                },
+                {
+                    "sector-title": "Sub Sector 1-3",
+                    "sector-value": "subsector1-3"
+                }
+            ]
+        },
+        {
+            "sector-title": "Customer Services",
+            "sector-value": "customer-services",
+            "sector-icon": "cog",
+            "sub-sectors": [
+                {
+                    "sector-title": "Sub Sector 2-1",
+                    "sector-value": "subsector2-1"
+                },
+                {
+                    "sector-title": "Sub Sector 2-2",
+                    "sector-value": "subsector2-2"
+                },
+                {
+                    "sector-title": "Sub Sector 2-3",
+                    "sector-value": "subsector2-3"
+                },
+                {
+                    "sector-title": "Sub Sector 2-4",
+                    "sector-value": "subsector2-4"
+                }
+            ]
+        },
+        {
+            "sector-title": "Education",
+            "sector-value": "education",
+            "sector-icon": "meter",
+            "sub-sectors": [
+                {
+                    "sector-title": "Sub Sector 3-1",
+                    "sector-value": "subsector3-1"
+                },
+                {
+                    "sector-title": "Sub Sector 3-2",
+                    "sector-value": "subsector3-2"
+                },
+                {
+                    "sector-title": "Sub Sector 3-3",
+                    "sector-value": "subsector3-3"
+                },
+                {
+                    "sector-title": "Sub Sector 3-4",
+                    "sector-value": "subsector3-4"
+                },
+                {
+                    "sector-title": "Sub Sector 3-5",
+                    "sector-value": "subsector3-5"
+                }
+            ]
+        },
+        {
+            "sector-title": "Receptionist",
+            "sector-value": "receptionist",
+            "sector-icon": "cog",
+            "sub-sectors": [
+                {
+                    "sector-title": "Sub Sector 4-1",
+                    "sector-value": "subsector4-1"
+                },
+                {
+                    "sector-title": "Sub Sector 4-2",
+                    "sector-value": "subsector4-2"
+                },
+                {
+                    "sector-title": "Sub Sector 4-3",
+                    "sector-value": "subsector4-3"
+                }
+            ]
+        },
+        {
+            "sector-title": "Human resources",
+            "sector-value": "human-resources",
+            "sector-icon": "meter",
+            "sub-sectors": [
+                {
+                    "sector-title": "Sub Sector 5-1",
+                    "sector-value": "subsector5-1"
+                },
+                {
+                    "sector-title": "Sub Sector 5-2",
+                    "sector-value": "subsector5-2"
+                },
+                {
+                    "sector-title": "Sub Sector 5-3",
+                    "sector-value": "subsector5-3"
+                },
+                {
+                    "sector-title": "Sub Sector 5-4",
+                    "sector-value": "subsector5-4"
+                },
+                {
+                    "sector-title": "Sub Sector 5-5",
+                    "sector-value": "subsector5-5"
+                }
+            ]
+        },
+        {
+            "sector-title": "Services",
+            "sector-value": "services",
+            "sector-icon": "cog",
+            "sub-sectors": [
+                {
+                    "sector-title": "Sub Sector 6-1",
+                    "sector-value": "subsector6-1"
+                },
+                {
+                    "sector-title": "Sub Sector 6-2",
+                    "sector-value": "subsector6-2"
+                },
+                {
+                    "sector-title": "Sub Sector 6-3",
+                    "sector-value": "subsector6-3"
+                }
+            ]
+        },
+        {
+            "sector-title": "Administration",
+            "sector-value": "administration",
+            "sector-icon": "meter",
+            "sub-sectors": [
+                {
+                    "sector-title": "Sub Sector 7-1",
+                    "sector-value": "subsector7-1"
+                },
+                {
+                    "sector-title": "Sub Sector 7-2",
+                    "sector-value": "subsector7-2"
+                },
+                {
+                    "sector-title": "Sub Sector 7-3",
+                    "sector-value": "subsector7-3"
+                }
+            ]
+        },
+        {
+            "sector-title": "Marketing",
+            "sector-value": "marketing",
+            "sector-icon": "cog",
+            "sub-sectors": [
+                {
+                    "sector-title": "Sub Sector 8-1",
+                    "sector-value": "subsector8-1"
+                },
+                {
+                    "sector-title": "Sub Sector 8-2",
+                    "sector-value": "subsector8-2"
+                },
+                {
+                    "sector-title": "Sub Sector 8-3",
+                    "sector-value": "subsector8-3"
+                }
+            ]
+        },
+        {
+            "sector-title": "Training customers",
+            "sector-value": "training-customers",
+            "sector-icon": "meter",
+            "sub-sectors": [
+                {
+                    "sector-title": "Sub Sector 9-1",
+                    "sector-value": "subsector9-1"
+                },
+                {
+                    "sector-title": "Sub Sector 9-2",
+                    "sector-value": "subsector9-2"
+                },
+                {
+                    "sector-title": "Sub Sector 9-3",
+                    "sector-value": "subsector9-3"
+                }
+            ]
+        }
+    ],
+    "employees": [
+        {
+            "name": "Joe Bloggs",
+            "imgUrl": "../../assets/images/employee-pic1.jpg"
+        },
+        {
+            "name": "Jane Freeman",
+            "imgUrl": "../../assets/images/employee-pic2.jpg"
+        },
+        {
+            "name": "Dave Johnson",
+            "imgUrl": "../../assets/images/employee-pic3.jpg"
+        },
+        {
+            "name": "Trevor Davidson",
+            "imgUrl": "../../assets/images/employee-pic4.jpg"
+        },
+        {
+            "name": "Jane Simmons",
+            "imgUrl": "../../assets/images/employee-pic2.jpg"
+        },
+        {
+            "name": "Gerald Fairbrother",
+            "imgUrl": "../../assets/images/employee-pic1.jpg"
+        }
+    ],
+    "sortby": [
+        {
+            "option": "Relevance",
+            "optionValue": "relevance"
+        },
+        {
+            "option": "Ending soonest",
+            "optionValue": "endingsoonest"
+        },
+        {
+            "option": "Most recent",
+            "optionValue": "mostrecent"
+        },
+        {
+            "option": "Salary (Ascending)",
+            "optionValue": "salaryascending"
+        },
+        {
+            "option": "Salary (Descending)",
+            "optionValue": "salarydescending"
+        }
+    ],
+    "sortbyGeneric": [
+        {
+            "option": "Relevance",
+            "optionValue": "relevance"
+        },
+        {
+            "option": "Alphabetic",
+            "optionValue": "alphabetic"
+        }
+    ],
+    "sidebarMenuBlockDashboard": [
+        {
+            "sidebarSectionHeader": "My Dashboard",
+            "sidebarSectionItem": [
+                {
+                    "itemName": "Dashboard",
+                    "itemUrl": "#",
+                    "isActive": true
+                },
+                {
+                    "itemName": "Jobs",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Profile",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Searches and Alerts",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Documents",
+                    "itemUrl": "#",
+                    "isActive": false
+                }
+            ]
+        }
+    ],
+    "sidebarMenuBlockDashboardJobs": [
+        {
+            "sidebarSectionHeader": "My Dashboard",
+            "sidebarSectionItem": [
+                {
+                    "itemName": "Dashboard",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Jobs",
+                    "itemUrl": "#",
+                    "isActive": true
+                },
+                {
+                    "itemName": "Profile",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Searches and Alerts",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Documents",
+                    "itemUrl": "#",
+                    "isActive": false
+                }
+            ]
+        }
+    ],
+    "sidebarMenuBlockDashboardDocs": [
+        {
+            "sidebarSectionHeader": "My Dashboard",
+            "sidebarSectionItem": [
+                {
+                    "itemName": "Dashboard",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Jobs",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Profile",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Searches and Alerts",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Documents",
+                    "itemUrl": "#",
+                    "isActive": true
+                }
+            ]
+        }
+    ],
+    "sidebarMenuBlockDashboardProfile": [
+        {
+            "sidebarSectionHeader": "My Dashboard",
+            "sidebarSectionItem": [
+                {
+                    "itemName": "Dashboard",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Jobs",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Profile",
+                    "itemUrl": "#",
+                    "isActive": true
+                },
+                {
+                    "itemName": "Searches and Alerts",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Documents",
+                    "itemUrl": "#",
+                    "isActive": false
+                }
+            ]
+        }
+    ],
+    "sidebarMenuBlockDashboardSearches": [
+        {
+            "sidebarSectionHeader": "My Dashboard",
+            "sidebarSectionItem": [
+                {
+                    "itemName": "Dashboard",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Jobs",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Profile",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Searches and Alerts",
+                    "itemUrl": "#",
+                    "isActive": true
+                },
+                {
+                    "itemName": "Documents",
+                    "itemUrl": "#",
+                    "isActive": false
+                }
+            ]
+        }
+    ],
+    "sidebarMenuBlockNewsArticle": [
+        {
+            "sidebarSectionHeader": "Insight",
+            "sidebarSectionItem": [
+                {
+                    "itemName": "Profile",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Jobs",
+                    "itemUrl": "#",
+                    "isActive": true
+                },
+                {
+                    "itemName": "Searches and Alerts",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Documents",
+                    "itemUrl": "#",
+                    "isActive": false
+                }
+            ]
+        }
+    ],
+    "sidebarNavConsultantProfile": [
+        {
+            "sidebarSectionHeader": "Find a branch",
+            "sidebarSectionItem": [
+                {
+                    "itemName": "Branch A",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Branch B",
+                    "itemUrl": "#",
+                    "isActive": true
+                },
+                {
+                    "itemName": "Branch C",
+                    "itemUrl": "#",
+                    "isActive": false
+                },
+                {
+                    "itemName": "Branch D",
+                    "itemUrl": "#",
+                    "isActive": false
+                }
+            ]
+        }
+    ],
+    "miniBioConsultant" : {
+        "miniBioTitle" : "Consultant:",
+        "miniBioName" : "Jeremy Ronson",
+        "miniBioPhone" : "01234 56789",
+        "miniBioEmail" : "jeremy.ronson@consultancy.com"
+    },
+    "miniBioAuthor" : {
+        "miniBioTitle" : "Written by:",
+        "miniBioTitle" : "Written by:",
+        "miniBioName" : "Alan Parsons",
+        "miniBioPhone" : "01234 56789",
+        "miniBioEmail" : "alan.parsons@writing.com"
+    },
+    "tagList" : [
+        {
+            "tagName" : "News"
+        },
+        {
+            "tagName" : "Upcoming Events"
+        },
+        {
+            "tagName" : "Consultancy"
+        },
+        {
+            "tagName" : "Memo"
+        },
+        {
+            "tagName" : "Current"
+        }
+    ],
+    "bannerText" :
+    {
+        "bannerTextContent" : "Speak to our specialists now on"
+    }
+}

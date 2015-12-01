@@ -1,0 +1,16 @@
+//
+// UPLOAD DOCUMENT
+//
+//
+
+$upload-doc-padding: $spacing-med 0;
+$upload-doc-align: right;
+
+.upload-document-cta {
+  text-align: $upload-doc-align;
+  padding: $upload-doc-padding;
+
+  .button {
+    margin: 0;
+  }
+}

@@ -1,0 +1,82 @@
+//
+// SEARCH LIST ITEM
+//
+//
+
+$search-list-bg: map_get($brandcolors, white);
+$search-list-item-padding: $spacing-med;
+$search-list-margin: 0 0 $spacing-lrg 0;
+$search-list-item-border-bottom: none;
+
+.search-list-item {
+  //background: map_get($brandcolors, white);
+  //padding:        $search-list-item-padding;
+ // margin: $search-list-margin;
+  //border-bottom:  $search-list-item-border-bottom;
+
+  header, .enable-notifications {
+    display: none;
+  }
+
+  header {
+    form {
+      display: none;
+      label {
+        @extend %visuallyhidden;
+      }
+    }
+    &.is-editing {
+      h3 {
+        display: none;
+      }
+      form {
+        display: block;
+        padding-bottom: $spacing-med;
+      }
+    }
+    h3 {
+      //margin-bottom: $spacing-sml;
+      .edit {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .save-search, .enable-notifications {
+    position:absolute;
+    top:0;
+    //margin-top: -(rem(20));
+    right: 0;
+  }
+
+  .search-terms {
+    padding-bottom: $spacing-med;
+  }
+
+  &.is-saved {
+    header {
+      display: block;
+    }
+    .save-search, .enable-notifications {
+      //top:0%;
+    }
+    .enable-notifications {
+      display: inline-block;
+      margin-top: 2.5rem;
+    }
+    .search-terms {
+      padding-top: $spacing-med;
+    }
+  }
+
+  &.is-expired {
+    background: map-get($brandcolors, white);
+    * {
+      color: darken(map-get($brandcolors, white), 35%);
+    }
+  }
+}
+
+.search-list-item-details {
+  @extend .job-list-item-details;
+}

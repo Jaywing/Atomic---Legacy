@@ -1,0 +1,32 @@
+//
+//  BLOG LIST SECTION
+//
+//
+$blog-list-section-bp: desktopSml;
+$blog-list-section-padding: $spacing-med $spacing-med 0 $spacing-med;
+$blog-list-section-padding-dt: $spacing-med $spacing-lrg 0 $spacing-lrg;
+$blog-list-section-margin: 0 (-$spacing-med);
+$blog-list-section-margin-dt: 0 (-$spacing-lrg) $spacing-lrg;
+$blog-list-section-bg: map_get($brandcolors, lightGrey);
+$blog-list-section-header: 0 (-$spacing-med) $spacing-lrg (-$spacing-med);
+$blog-list-section-header-dt: 0 (-$spacing-lrg) $spacing-lrg (-$spacing-lrg);
+
+
+.blog-list-section {
+  background: $blog-list-section-bg;
+  padding: $blog-list-section-padding;
+  margin: $blog-list-section-margin;
+
+  .section-title {
+
+    h1 {
+      @extend %h2;
+      margin-bottom: $spacing-med;
+    }
+  }
+
+  @include respond-to($blog-list-section-bp) {
+    padding: $blog-list-section-padding-dt;
+    margin: $blog-list-section-margin-dt;
+  }
+}

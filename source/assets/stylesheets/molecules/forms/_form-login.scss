@@ -1,0 +1,18 @@
+//
+// SIGN UP FORM
+//
+//
+$sign-in-form-bp: desktopSml;
+$form-login-padding: $spacing-med;
+$form-login-padding-dt: $spacing-lrg;
+
+.form-login {
+  background: map_get($brandcolors, lightGrey);
+  padding: $form-login-padding;
+  //border-top: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+  //border-bottom: 1px solid darken(map-get($brandcolors, lightGrey), 10%);
+
+  @include respond-to($sign-in-form-bp) {
+    padding: $form-login-padding-dt;
+  }
+}

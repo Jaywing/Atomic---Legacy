@@ -1,0 +1,12 @@
+//
+//	EMPLOYEE NAV SECTION
+//
+//  
+//
+
+.employee-nav-section {
+  text-align: center;
+  .l-container {
+  	@extend %container;
+  }
+}

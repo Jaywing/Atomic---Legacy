@@ -1,0 +1,16 @@
+<ul class="sitemap">
+  {{#nav}}
+  <li>
+  	<a href="{{page-url}}">{{page-title}}</a>
+  	{{ #has-children }}
+  		<ul>
+        {{ #subpages }}
+        <li>
+            <a href="{{page-url}}">{{page-title}}</a>
+        </li>
+        {{ /subpages }}
+      </ul>
+    {{ /has-children }}
+  </li>
+  {{ /nav }}
+</ul>

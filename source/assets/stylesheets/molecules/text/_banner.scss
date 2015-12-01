@@ -1,0 +1,49 @@
+//
+//	BANNER
+//
+//
+$banner-p-font-size: rem(25);
+$banner-alignment: center;
+
+.banner {
+  text-align: $banner-alignment;
+  margin-bottom: 1rem;
+
+  p {
+    font-size: $banner-p-font-size;
+    margin: 0;
+  }
+
+  &.phone-banner {
+
+    p, span {
+      color: map_get($brandcolors, brown);
+    }
+
+    p {
+      font-size: rem(20);
+      position: relative;
+
+      span {
+        display: inline-block;
+        background: map_get($brandcolors, white);
+        padding: 0 rem(10);
+        position: relative;
+        z-index: 2;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        border-top: 1px solid map_get($brandcolors, khaki);
+        @extend %vertically-centered;
+      }
+    }
+
+    .num {
+      font-size: rem(30);
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+//
+//	INLINE
+//
+//	
+//
+
+$small-font-size: $font-size-sml;
+$acronym-underline: 1px dotted map-get($colors, grey);
+$acronym-color: map-get($colors, grey);
+
+$code-color: map-get($colors, grey);
+$code-font-family: $monospace-font;
+$code-font-weight: $font-weight-normal;
+$code-background-color: lighten(map-get($colors, grey), 55%);
+$code-border-size: 1px;
+$code-border-style: solid;
+$code-border-color: lighten(map-get($colors, grey), 25%);
+$code-padding: rem(5);
+$code-margin: 0 0 $vertical-rhythm 0;
+
+$hr-border-width: 2px;
+$hr-border-style: solid;
+$hr-border-color: map-get($colors, grey);
+$hr-margin: 0 0 $vertical-rhythm 0;
+
+$time-color: inherit;
+$time-font-style: normal;
+
+// Emphasis Colours
+$color-error: map-get($colors, red);
+$color-valid: map-get($colors, green);
+$color-warning: map-get($colors, orange);
+$color-info: map-get($colors, grey);
+
+$cite-color: map-get($brandcolors, grey);
+$cite-font-style: normal;
+
+em, i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong, b {
+  font-weight: $font-weight-bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: $small-font-size;
+  line-height: inherit;
+}
+
+cite {
+  color: $cite-color;
+  font-style: $cite-font-style;
+}
+
+abbr, acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: $acronym-color;
+  cursor: map-get($cursors, help);
+}
+
+abbr {
+  text-transform: none;
+  &[title] {
+    border-bottom: $acronym-underline;
+  }
+}
+
+code {
+  display: inline-block;
+  background-color: $code-background-color;
+  border-color: $code-border-color;
+  border-style: $code-border-style;
+  border-width: $code-border-size;
+  color: $code-color;
+  font-family: $code-font-family;
+  font-weight: $code-font-weight;
+  padding: $code-padding;
+  margin: $code-margin;
+}
+
+hr {
+  border: $hr-border-style $hr-border-color;
+  border-width: $hr-border-width 0 0;
+  clear: both;
+  height: 0;
+  margin: $hr-margin;
+}
+
+time {
+  color: $time-color;
+  font-style: $time-font-style;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.is-error, .is-ending-soon {
+  color: $color-error;
+}
+
+.is-valid {
+  color: $color-valid;
+}
+
+.is-warning {
+  color: $color-warning;
+}
+
+.is-info {
+  color: $color-info;
+}
+
+p {
+  img {
+    margin: 0.5rem 1rem 1rem 0;
+  }
+}

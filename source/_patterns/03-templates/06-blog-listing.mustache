@@ -1,0 +1,37 @@
+<div class="page is-logged-in" id="page">
+
+    {{> organisms-header-logged-in }}
+
+    <main id="content" role="main" class="main">
+
+        {{> organisms-breadcrumb-section }}
+
+        <div class="col-wrap news-article-wrap">
+
+          <section class="col-sub col">
+
+              <div class="col-inner col-sub-inner">
+
+                  {{> molecules-sidebar-nav-news-article }}
+
+              </div>
+
+          </section>
+
+          <section class="col-main col">
+
+              <div class="col-inner col-main-inner">
+
+                {{> organisms-blog-list }}
+
+              </div>
+
+          </section>
+
+        </div>
+
+    </main>
+
+    {{> organisms-footer }}
+
+</div>

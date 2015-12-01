@@ -1,0 +1,12 @@
+//
+// UPLOAD DOCUMENT
+//
+//
+
+$upload-doc-padding: $spacing-med;
+$upload-doc-align: right;
+
+.upload-a-document {
+  text-align: $upload-doc-align;
+  padding: $upload-doc-padding;
+}

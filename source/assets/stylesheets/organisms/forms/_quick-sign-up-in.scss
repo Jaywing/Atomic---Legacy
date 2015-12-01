@@ -1,0 +1,38 @@
+//
+// QUICK SIGN UP / IN FORM
+//
+//
+
+.remodal {
+	.collapsible-tabs {
+		margin-top: -($spacing-med);
+		margin-left: -($spacing-med);
+		margin-right: -($spacing-med);
+	}
+	.form-inline {
+		width:90%;
+		margin:0 auto;
+		background: map-get($brandcolors, white);
+		h2 {
+			padding-top: $spacing-sml;
+		}
+		@include respond-to(tabletLrg) {
+			width:80%;
+			padding-top: $spacing-lrg;
+		}
+		input[type=checkbox] {
+			&:before {
+				border:1px solid map-get($brandcolors, grey);
+				width: 1.15rem;
+			}
+		}
+		.form-controls {
+			a {
+				font-size: 1rem;
+			}
+			button {
+				margin-top: -0.75rem;
+			}
+		}
+	}
+}

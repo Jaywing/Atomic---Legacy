@@ -1,0 +1,7 @@
+.tag-list {
+  @extend .h-no-list-styles;
+
+  li {
+    display: inline-block;
+  }
+}

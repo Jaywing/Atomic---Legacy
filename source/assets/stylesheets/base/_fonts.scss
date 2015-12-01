@@ -1,0 +1,14 @@
+//
+//	FONTS
+//
+//	Import Web fonts here
+//
+
+$fontpath: '../fonts/';
+
+//FF Din Pro
+@include font-face("FF Din Pro", $fontpath + "ffdinpro/2F9081_5_0");
+@include font-face("FF Din Pro Medium", $fontpath + "ffdinpro/2F9081_4_0");
+
+// Iconmoon
+@include font-face("Iconmoon", $fontpath + "iconmoon/icomoon");

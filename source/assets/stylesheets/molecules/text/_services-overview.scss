@@ -1,0 +1,24 @@
+//
+//	SERVICES TESTIMONIAL
+//
+//
+//
+$services-overview-bp: desktopSml;
+$services-overview-padding: 0;
+$services-overview-margin: 0 0 $spacing-lrg 0;
+$services-overview-col-padding: $spacing-med;
+
+.services-overview {
+  padding: $services-overview-padding;
+  margin: $services-overview-margin;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+@include respond-to(tabletLrg) {
+  .services-overview {
+    padding: 0;
+  }
+}

@@ -1,0 +1,17 @@
+//
+// SEARCH RESULTS SIDEBAR
+//
+//
+
+.search-results-sidebar {
+  color: map_get($brandcolors, white);
+  background: map_get($brandcolors, green);
+  padding: $spacing-med;
+  @include transition(all 0.25s linear);
+  max-height: 500px;
+  overflow: hidden;
+  &.is-hidden {
+  	max-height:0;
+  	padding:0 $spacing-med;
+  }
+}

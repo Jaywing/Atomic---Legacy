@@ -1,0 +1,109 @@
+//
+//	SORT BY
+//
+//
+//
+
+$sort-by-padding: $spacing-med $spacing-lrg;
+$sort-by-count-weight: $font-weight-normal;
+$sort-by-count-padding: $spacing-med 0;
+$sort-by-vertical-align: 0.57rem;
+$sort-by-border-bottom: 1px solid map-get($colors, lightGrey);
+$sort-by-bg: map-get($brandcolors, black);
+$sort-by-color: map-get($brandcolors, white);
+
+.sort-by {
+  @include clearfix;
+  display: block;
+  padding: $sort-by-padding;
+  border-bottom: $sort-by-border-bottom;
+  position: relative;
+  background: $sort-by-bg;
+  color: $sort-by-color;
+  
+  .field {
+    width: auto;
+    float: right;
+    margin-right: -($spacing-med);
+    label {
+      color: $sort-by-color;
+      width:25%;
+      padding: $sort-by-vertical-align $spacing-med 0 0;
+    }
+    select {
+      padding-left: 0.4rem;
+      font-size:0.9rem;
+      float:left;
+      border:0;
+    }
+  }
+  .btn-refine {
+    position: absolute;
+    left: $spacing-med;
+    bottom: $spacing-med;
+    margin:0;
+  }
+}
+
+.sort-by-count {
+  @extend %h4;
+  margin:0;
+  display: block;
+  font-weight: $sort-by-count-weight;
+  font-family: $primary-font;
+  padding: 0 0  $spacing-sml;
+  margin-left: -($spacing-med);
+  b {
+    font-weight: $sort-by-count-weight;
+  }
+}
+
+@include respond-to(phoneLrg) {
+  .sort-by {
+    .field {
+      label {
+        float:left;
+      }
+      select {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@include respond-to(tabletSml) {
+  .sort-by {
+    @include row;
+    padding: $sort-by-padding;
+  }
+}
+
+@include respond-to(desktopSml) {
+  .sort-by {
+    margin:0;
+    .btn-refine {
+      display: none;
+    }
+
+    .field {
+      float: right;
+      margin-right: 0;
+
+      label {
+        text-align: right;
+      }
+    }
+
+    .sort-by-count {
+      margin:0;
+      @include cols(6, 10);
+      float: left;
+      padding-top: $sort-by-vertical-align;
+    }
+
+    .field {
+      @include cols(4, 10);
+
+    }
+  }
+}

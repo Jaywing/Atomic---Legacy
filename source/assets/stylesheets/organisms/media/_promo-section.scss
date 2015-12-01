@@ -1,0 +1,77 @@
+//
+//	SPECIALISM SECTION
+//
+//  
+//
+
+$promo-section-bg: map_get($brandcolors, lightGrey);
+$promo-section-padding: $spacing-med;
+$promo-section-dt-padding: 0 0 $spacing-lrg 0;
+
+.promo-section {
+  //@extend %container;
+  padding: $promo-section-padding;
+  &.three-col-strict {
+    padding:0 $spacing-med;
+  }
+  &.promo-section-map {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+@include respond-to(tabletLrg) {
+
+  .promo-section {
+    background: $promo-section-bg;
+
+    &.promo-section-map {
+      margin-bottom: $spacing-lrg;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .l-container {
+      display: table;
+      table-layout: fixed; //Fixes bug in FF
+      padding: 0;
+      position:relative;
+      width:100%;
+    }
+
+    .promo-item {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    &.three-col-strict {
+      padding-top:0;
+      padding-bottom: $spacing-med;
+      &:first-of-type {
+        padding-top: $spacing-med;
+      }
+      .l-container {
+        //@include row;
+
+        .promo-item {
+          @include cols(1,3, $spacing-sml);
+        }
+      }
+    }
+  }
+
+  .brand-positioning-section + .promo-section {
+    .l-container {
+      @extend %container;
+      max-width: 69rem;
+      padding: $promo-section-dt-padding;
+      @include respond-to(tabletLrg) {
+        width:100%;
+      }
+      @include respond-to(desktopSml) {
+        width: 84%;
+      }
+    }
+  }
+
+}

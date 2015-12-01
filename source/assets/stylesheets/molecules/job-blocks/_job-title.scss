@@ -1,0 +1,47 @@
+//
+//	JOB TITLE
+//
+//
+//
+
+//$job-title-heading-bp:	tabletLrg;
+
+$job-title-padding: $spacing-med 0;
+$job-title-txt-color: map-get($colors, black);
+//$job-title-txt-size: 1rem;
+$job-title-txt-line-height: $base-line-height;
+$job-title-star-padding: 0.5rem 0;
+$job-title-border: 1px solid map-get($colors, lightGrey);
+
+.job-title {
+  padding: $job-title-padding;
+  position: relative;
+  border-bottom: $job-title-border;
+
+  h1 {
+    @extend %h3;
+    margin: 0;
+    color: $job-title-txt-color;
+  }
+
+  .save-job {
+    position: absolute;
+    top: $spacing-med;
+    right: $spacing-med;
+  }
+}
+
+.job-title-inner {
+  @include row;
+}
+
+.job-title-left {
+  @include cols(10,12);
+}
+
+.job-title-right {
+  @include cols(2,12);
+  text-align: right;
+
+  
+}

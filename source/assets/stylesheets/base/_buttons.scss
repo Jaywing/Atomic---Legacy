@@ -1,0 +1,205 @@
+//
+//	BUTTONS
+//
+//
+//
+
+// We use these to build padding for buttons
+$button-tny: 0.7rem;
+$button-sml: 0.8rem;
+$button-med: 0.9rem;
+$button-lrg: 1.1rem;
+
+// We use this to control the display property.
+$button-display: inline-block;
+$button-margin: 0 0 $vertical-rhythm 0;
+
+// We use these to control button text styles.
+$button-font-family: $secondary-font;
+$button-font-color: map-get($brandcolors, white);
+$button-font-color-alt: map-get($colors, grey);
+$button-font-tny: 0.8rem;
+$button-font-sml: 0.9rem;
+$button-font-med: 1rem;
+$button-font-lrg: 1.25rem;
+$button-font-weight: $font-weight-normal;
+$button-font-align: center;
+
+$button-padding: 0.8rem 1.75rem 0.65rem;
+
+// We use these to control various hover effects.
+$button-function-factor: 20%;
+
+// We use these to control button border styles.
+$button-border-width: 0;
+$button-border-style: solid;
+$button-bg-color: map-get($brandcolors, green);
+$button-bg-hover: darken($button-bg-color, $button-function-factor);
+$button-border-color: $button-bg-hover;
+$secondary-button-bg: map_get($brandcolors, khakiLight);
+$secondary-button-color: map_get($brandcolors, brown);
+$secondary-button-bg-hover: map_get($brandcolors, khaki);
+$secondary-button-border-color: $secondary-button-bg-hover;
+
+$tertiary-button-bg: map-get($brandcolors, lightGreen);
+$tertiary-button-bg-hover: darken($tertiary-button-bg, $button-function-factor);
+
+$auxiliary-button-bg: map-get($brandcolors, interGreen);
+$auxiliary-button-bg-hover: darken($tertiary-button-bg, $button-function-factor);
+
+// We use this to set the default radius used throughout the core.
+$button-radius: 3px;
+$button-round: 1000px;
+
+// We use this to set default opacity and cursor for disabled buttons.
+$button-disabled-opacity: .7;
+$button-disabled-cursor: map-get($cursors, default);
+
+$button-transition-fade-time: 0.15s;
+$button-transition-fade-timing-function: linear;
+
+//Button icon styles
+$button-icon-margin: 0 0 0 $spacing-med;
+$button-icon-colour: rgba(255, 255, 255, 0.5);
+$button-icon-colour-hover: rgba(255, 255, 255, 1);
+$button-icon-font-size: $button-font-tny;
+
+.button, button {
+  @include transition(all $button-transition-fade-time $button-transition-fade-timing-function);
+  display: $button-display;
+  margin: $button-margin;
+  font-family: $button-font-family;
+  font-size: $button-font-med;
+  color: $button-font-color;
+  background: $button-bg-color;
+  padding: $button-padding;
+  text-decoration: none;
+  border: $button-border-width $button-border-style $button-border-color;
+  line-height: 1;
+  outline: 0;
+  border-radius: $button-round;
+
+  i.icon-close {
+    @include transition(color $button-transition-fade-time $button-transition-fade-timing-function);
+    font-size: $button-icon-font-size;
+    margin: $button-icon-margin;
+    color: $button-icon-colour
+  }
+
+  &:hover, &:focus {
+    background: $button-bg-hover;
+    color: $button-font-color;
+
+    i.icon-close {
+      color: $button-icon-colour-hover;
+    }
+  }
+
+  &.secondary {
+    background: $secondary-button-bg;
+    border-color: $secondary-button-bg-hover;
+    color: $secondary-button-color;
+    &:hover, &:focus {
+      color: $secondary-button-color;
+      background: $secondary-button-bg-hover;
+    }
+  }
+
+  &.tertiary {
+    background: $tertiary-button-bg;
+    border-color: $tertiary-button-bg-hover;
+    &:hover, &:focus {
+      background: $tertiary-button-bg-hover;
+    }
+  }
+
+  &.disabled {
+    cursor: $button-disabled-cursor;
+    opacity: $button-disabled-opacity;
+    &:hover, &:focus {
+      background: $button-bg-color
+    }
+    &.secondary {
+      &:hover, &:focus {
+        background: $secondary-button-bg;
+      }
+    }
+  }
+
+  &.radius {
+    border-radius: $button-radius;
+  }
+  &.block {
+    width: 100%;
+    text-align: center;
+  }
+  &.icon {
+    i, span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    i:first-child {
+      margin-right: 5px;
+      margin-left: -10px;
+    }
+    i:last-child {
+      margin-left: 5px;
+      margin-right: -10px;
+    }
+  }
+
+  &.linkedin {
+    padding: 0 rem(15) 0 0;
+    border-radius: 3px;
+    background: #0076b8;
+    margin-bottom: $spacing-sml;
+    .icon-linkedin {
+      font-size: 2.5rem;
+      padding: rem(1) rem(3) rem(1);
+      border-right: 1px solid rgba(0,0,0,0.5);
+      margin:0;
+    }
+    i:first-child {
+      margin: 0;
+    }
+    span {
+      display: inline-block;
+      padding: rem(3) 0 0 rem(3);
+    }
+    &:hover, &:focus {
+      background: darken(#0076b8, 10%);
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+    }
+  }
+
+  &.btn-show-hide {
+    font-size: 0.9rem;
+
+    .btn-hide {
+      display: none;
+    }
+    &.is-active {
+      .btn-hide { display: inline-block; }
+      .btn-show { display: none; }
+    }
+  }
+
+  &.btn-refine {
+    i:first-child {
+      margin: 0;
+    }
+    span {
+      display: none;
+    }
+    @include respond-to(tabletSml) {
+      i:first-child {
+        margin-left: -10px;
+        margin-right:5px;
+      }
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}

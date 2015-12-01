@@ -1,0 +1,61 @@
+<div class="page is-logged-in" id="page">
+
+    {{> organisms-header-logged-in }}
+
+    <main id="content" role="main" class="main">
+
+        {{> organisms-breadcrumb-section }}
+
+        <div class="col-wrap news-article-wrap">
+
+            <section class="col-sub col">
+
+                <div class="col-inner col-sub-inner">
+
+                    {{> molecules-sidebar-nav-news-article }}
+
+                </div>
+
+            </section>
+
+            <!-- Begin .news-article-section -->
+            <section class="col-main col">
+
+                <div class="col-inner col-main-inner">
+
+                    <article>
+
+                        {{> organisms-page-title-with-meta}}
+
+                        {{> molecules-generic-content}}
+
+                        {{> molecules-two-col-content}}
+
+                        {{> molecules-collapsible }}
+
+                        {{> organisms-testimonial}}
+
+                        {{> molecules-phone-banner}}
+
+                        {{> organisms-tag-list-section}}
+
+                        {{> molecules-social-media-share}}
+
+                        {{> molecules-related-mini-bio-author}}
+
+                    </article>
+
+                </div>
+
+            </section>
+            <!-- End .news-article-section -->
+
+        </div>
+
+        {{> organisms-latest-news-section }}
+        
+    </main>
+
+    {{> organisms-footer }}
+
+</div>

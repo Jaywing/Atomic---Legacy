@@ -1,0 +1,21 @@
+//
+//	GLOBAL
+//
+//  Import all sass files need to compile global styles
+//
+
+@import "config/config";
+// Config
+@import "libs/libs";
+// Libs
+@import "vendor/vendor";
+// Vendor (add all third-party styles before the rest)
+@import "base/base";
+// Base
+@import "molecules/molecules";
+// Molecules
+@import "organisms/organisms";
+// Organisms
+@import "templates/templates";
+
+// Templates

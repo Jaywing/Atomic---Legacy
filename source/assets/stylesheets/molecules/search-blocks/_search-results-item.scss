@@ -1,0 +1,22 @@
+//
+// SEARCH RESULTS ITEM
+//
+//
+
+.search-results-item {
+
+  h3 {
+    margin-bottom: $spacing-sml;
+  }
+
+  .list-item-summary {
+    display: block;
+    border: 0;
+
+    p {
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

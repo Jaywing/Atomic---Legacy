@@ -1,0 +1,74 @@
+//
+//	COLLAPSIBLE
+//
+//  
+//
+
+
+$collapsible-triangle-size: 	0.33rem;
+$collapsible-triangle-color:	map-get($colors, blue);
+$collapsible-margin: 0 0 $spacing-med;
+$collapsible-header-padding: $spacing-sml 0;
+
+.collapsible-header {
+	@include clearfix;
+	display: block;
+	position: relative;
+	padding: $collapsible-header-padding;
+	@include respond-to(tabletLrg) {
+		padding:0;
+	}
+	.collapsible-header-child {
+		padding: 0 0 0 1.25rem;
+		margin: 0;
+		&:before {
+			@extend %vertically-centered;
+			@include transition(all 0.25s linear);
+			font-family: $icon-font;
+			font-size: rem(11);
+			left: 0;
+			content: '\e80d';
+			padding-left: rem(3);
+			margin-top: -(rem(1));
+		}
+	}
+}
+.collapsible-content {
+	@include transition(all 0.25s linear);
+	height: auto;
+	max-height: 0;
+	overflow: hidden;
+}
+
+
+.collapsible {
+	margin: $collapsible-margin;
+	&.is-active {
+		.collapsible-content {
+			max-height: 800px;
+			padding-top: $spacing-sml;
+		}
+		.collapsible-header {
+			.collapsible-header-child {
+				&:before {
+					@include transform(rotate(90deg) translateX(-50%));
+					padding-left: 0;
+					margin-top: -(rem(3));
+				}
+			}
+		}
+	}
+}
+
+.collapsible-header  {
+	h6 { font-size:1.2rem; }
+}
+
+.col-main {
+	.collapsible {
+		margin-bottom: $spacing-lrg;
+		.collapsible-content { 
+			padding-left: 1.3rem;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+//
+//	SERVICES TESTIMONIAL
+//
+//
+//
+$two-col-content-bp: desktopSml;
+$two-col-content-padding: $spacing-med;
+$two-col-content-col-padding: $spacing-med;
+
+.two-col-content {
+  padding: $two-col-content-padding;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+@include respond-to(desktopSml) {
+  .two-col-content {
+    padding: 0;
+  }
+
+  .two-col-content-cols {
+    @include row;
+
+    .two-col-content-left,
+    .two-col-content-right {
+      @include cols(6,12, $two-col-content-col-padding);
+    }
+  }
+}

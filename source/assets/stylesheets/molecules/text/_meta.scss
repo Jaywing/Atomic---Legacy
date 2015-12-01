@@ -1,0 +1,36 @@
+//
+// META
+//
+//
+
+$article-meta-spacing: $spacing-med;
+$article-meta-font-weight: 600;
+$article-meta-font-spacing: 0 0 $spacing-med;
+$article-meta-icon-spacing: 0 ($spacing-sml / 2);
+
+.article-meta,
+.meta,
+.article-meta:last-child,
+.meta:last-child {
+  font-family: $secondary-font;
+  font-size: 0.75rem;
+  margin:       $article-meta-font-spacing;
+  display: block;
+}
+
+.article-meta {
+  i,
+  span,
+  time {
+    vertical-align: middle;
+  }
+
+  i {
+    padding: $article-meta-icon-spacing;
+    color: map_get($brandcolors, khaki);
+    font-size: rem(5);
+  }
+  time {
+    font-family: $primary-font;
+  }
+}

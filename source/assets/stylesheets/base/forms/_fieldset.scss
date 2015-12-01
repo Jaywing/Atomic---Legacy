@@ -1,0 +1,58 @@
+//
+//	FIELDSET
+//
+//  
+//
+
+$form-spacing: $spacing-med;
+
+$fieldset-border-style: none;
+$fieldset-border-width: 0;
+$fieldset-border-color: map-get($colors, lightGrey);
+$fieldset-padding: $form-spacing;
+$fieldset-margin: 0 0 $form-spacing 0;
+
+$legend-bg: transparent;
+$legend-font-weight: $font-weight-normal;
+$legend-padding: 0;
+$legend-margin: 0 0 $form-spacing 0;
+
+$field-padding: 0 0 $spacing-med;
+
+form {
+  text-align: left;
+}
+
+fieldset {
+  overflow: hidden;
+  border: $fieldset-border-width $fieldset-border-style $fieldset-border-color;
+  margin: $fieldset-margin;
+  padding: $fieldset-padding;
+
+  // and legend styles
+  legend {
+    @extend %h4;
+    background: $legend-bg;
+    font-weight: $legend-font-weight;
+    margin: $legend-margin;
+    padding: $legend-padding;
+  }
+
+  &.no-styles {
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    legend {
+      padding: 0;
+      background: none;
+    }
+
+  }
+
+  .field {
+    padding: $field-padding;
+    position: relative;
+  }
+}
+

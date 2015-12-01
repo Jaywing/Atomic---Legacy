@@ -1,0 +1,16 @@
+//
+// CTA SECTION
+//
+//
+
+$cta-section-padding: $spacing-lrg 0 $spacing-med 0;
+$cta-section-alignment: right;
+
+.cta-section {
+  text-align: $cta-section-alignment;
+  padding: $cta-section-padding;
+
+  button {
+    margin: 0;
+  }
+}

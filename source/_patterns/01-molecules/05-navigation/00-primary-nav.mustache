@@ -1,0 +1,25 @@
+<nav id="nav" class="nav" role="navigation">
+    <a href="#nav" class="nav-toggle nav-show" title="Show navigation"><span>Show navigation</span><span
+            class="icon-open-menu" aria-hidden="true"></span></a>
+    <a href="#" class="nav-toggle nav-hide" title="Hide navigation"><span>Hide navigation</span><span
+            class="icon-close-menu" aria-hidden="true"></span></a>
+
+    <div class="nav-container">
+        <ul class="nav-top-level">
+            {{#nav}}
+                <li class="has-children-{{has-children}}">
+                    <a href="{{page-url}}">{{page-title}}</a>
+                    {{ #has-children }}
+                    <ul>
+                        {{ #subpages }}
+                        <li>
+                            <a href="{{page-url}}">{{page-title}}</a>
+                        </li>
+                        {{ /subpages }}
+                    </ul>
+                    {{ /has-children }}
+                </li>
+            {{/nav}}
+        </ul>
+    </div>
+</nav><!--end .nav-->

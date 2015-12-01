@@ -33,15 +33,15 @@ $button-function-factor: 20%;
 // We use these to control button border styles.
 $button-border-width: 0;
 $button-border-style: solid;
-$button-bg-color: map-get($brandcolors, green);
+$button-bg-color: map-get($colors, blue);
 $button-bg-hover: darken($button-bg-color, $button-function-factor);
 $button-border-color: $button-bg-hover;
 $secondary-button-bg: map_get($brandcolors, khakiLight);
-$secondary-button-color: map_get($brandcolors, brown);
-$secondary-button-bg-hover: map_get($brandcolors, khaki);
+$secondary-button-color: map_get($brandcolors, grey);
+$secondary-button-bg-hover: map_get($brandcolors, lightGrey);
 $secondary-button-border-color: $secondary-button-bg-hover;
 
-$tertiary-button-bg: map-get($brandcolors, lightGreen);
+$tertiary-button-bg: map-get($brandcolors, grey);
 $tertiary-button-bg-hover: darken($tertiary-button-bg, $button-function-factor);
 
 $auxiliary-button-bg: map-get($brandcolors, interGreen);

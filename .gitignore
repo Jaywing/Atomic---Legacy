@@ -3,11 +3,8 @@ node_modules
 public/index.html
 public/styleguide.html
 public/styleguide/html/styleguide.html
-public/css/*
-public/fonts/*
-public/js/*
-public/images/*
-public/patterns/*
+public/assets
+public/patterns
 config.ini
 latest-change.txt
 patternlab.json

@@ -4,7 +4,7 @@
 //	
 //
 
-$anchor-font-color: map-get($brandcolors, green);
+$anchor-font-color: map-get($colors, blue);
 $anchor-text-decoration: none;
 $anchor-font-color-hover: darken($anchor-font-color, 20%);
 $anchor-text-decoration-hover: none;

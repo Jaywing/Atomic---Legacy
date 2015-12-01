@@ -85,11 +85,6 @@ $promo-item-body-padding-dt: 1.667rem $spacing-med;
     .promo-map-inner {
       background: $promo-item-bg;
       padding: $promo-item-link-padding;
-      .promo-item-map {
-        height: 12rem;
-        background: map-get($brandcolors, black);
-        border-top: 4px solid map-get($brandcolors, green);
-      }
     }
   }
 }
@@ -107,15 +102,12 @@ $promo-item-body-padding-dt: 1.667rem $spacing-med;
       margin-bottom: $spacing-med;
       width: 100%;
     }
-    .promo-item-image, .promo-item-map, .promo-item-body {
+    .promo-item-image, .promo-item-body {
       display: table-cell;
       vertical-align: top;
     }
     .promo-item-image {
       width: $promo-item-img-med-width;
-    }
-    .promo-item-map {
-      width: 50%;
     }
     .promo-item-body {
       padding-top: 0;
@@ -126,7 +118,7 @@ $promo-item-body-padding-dt: 1.667rem $spacing-med;
 
 @include respond-to(tabletSml) {
   .promo-item {
-    .promo-item-image, .promo-item-map {
+    .promo-item-image {
       width: $promo-item-img-lrg-width;
     }
   }
@@ -141,7 +133,7 @@ $promo-item-body-padding-dt: 1.667rem $spacing-med;
       max-width: $promo-item-dt-max-width;
       margin: 0 auto;
     }
-    .promo-item-image, .promo-item-map, .promo-item-body {
+    .promo-item-image, .promo-item-body {
       display: block;
       width: auto;
     }

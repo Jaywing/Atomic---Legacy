@@ -15,7 +15,7 @@ $blog-list-section-header-dt: 0 (-$spacing-lrg) $spacing-lrg (-$spacing-lrg);
 .blog-list-section {
   background: $blog-list-section-bg;
   padding: $blog-list-section-padding;
-  margin: $blog-list-section-margin;
+  //margin: $blog-list-section-margin;
 
   .section-title {
 
@@ -27,6 +27,6 @@ $blog-list-section-header-dt: 0 (-$spacing-lrg) $spacing-lrg (-$spacing-lrg);
 
   @include respond-to($blog-list-section-bp) {
     padding: $blog-list-section-padding-dt;
-    margin: $blog-list-section-margin-dt;
+    //margin: $blog-list-section-margin-dt;
   }
 }
